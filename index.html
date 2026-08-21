@@ -136,7 +136,7 @@
     <!-- Hero Banner -->
     <section class="hero">
       <div class="hero-slider" id="heroSlider">
-        <div class="hero-slide active"><video src="videos/heroVideo.mp4" autoplay muted loop playsinline preload="auto"
+        <div class="hero-slide active"><video id="heroVideo" autoplay muted loop playsinline preload="auto"
             aria-label="Hero video"></video></div>
         <div class="hero-content">
           <div class="container">
@@ -931,17 +931,48 @@
     </div>
   </footer>
 
+  <!-- hls.js for HLS (.m3u8) video support -->
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.13/dist/hls.min.js"></script>
+
   <!-- script -->
   <script>
     (function () {
       'use strict';
 
-      /* Hero video */
+      /* Hero video (HLS .m3u8) */
+      var HERO_VIDEO_SRC = 'https://permalink.dogevideo.com/player/get.m3u8?vcode=7ea243877f29890a&userId=15754&flsign=1e4b3d34357c0f16e9c84d0c96bc9ada&ext=.m3u8';
       document.addEventListener('DOMContentLoaded', function () {
-        var v = document.querySelector('.hero-slide video');
-        if (v) {
+        var v = document.getElementById('heroVideo');
+        if (!v) return;
+        function playVideo() {
           var p = v.play();
           if (p && typeof p.catch === 'function') p.catch(function () { });
+        }
+        if (typeof Hls !== 'undefined' && Hls.isSupported()) {
+          var hls = new Hls({ maxBufferLength: 30, liveDurationInfinity: true });
+          hls.loadSource(HERO_VIDEO_SRC);
+          hls.attachMedia(v);
+          hls.on(Hls.Events.MANIFEST_PARSED, playVideo);
+          hls.on(Hls.Events.ERROR, function (e, data) {
+            if (data && data.fatal) {
+              switch (data.type) {
+                case Hls.ErrorTypes.NETWORK_ERROR:
+                  hls.startLoad();
+                  break;
+                case Hls.ErrorTypes.MEDIA_ERROR:
+                  hls.recoverMediaError();
+                  break;
+                default:
+                  hls.destroy();
+                  break;
+              }
+            }
+          });
+        } else if (v.canPlayType('application/vnd.apple.mpegurl')) {
+          v.src = HERO_VIDEO_SRC;
+          v.addEventListener('loadedmetadata', playVideo);
+        } else {
+          console.warn('HLS not supported in this browser');
         }
       });
 
