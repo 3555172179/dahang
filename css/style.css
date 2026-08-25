@@ -1,5 +1,5 @@
 /* =====================================================================
-   ZGS Glass  ·  Brand Visual System v1.0
+   ZGS Glass  ·  Brand Visual System
    DM Sans (sans) × DM Serif Display (display) · Ice crystal system · Asymmetric grids
    ===================================================================== */
 
@@ -14,7 +14,7 @@ ul,ol{list-style:none}
 input,textarea,select{font:inherit;color:inherit}
 :focus-visible{outline:2px solid var(--primary);outline-offset:3px;border-radius:6px}
 
-/* 02 · v1.0 Design Tokens */
+/* 02 · Design Tokens */
 :root{
   --primary:#5BA3B5;--primary-press:#4A8C9F;--primary-soft:#7CC9D6;--primary-tint:#E5F2F4;
   --accent:#7CC9D6;--accent-press:#4A8C9F;--accent-soft:#A8DDE4;--accent-tint:#E8F4F6;
@@ -89,15 +89,16 @@ p{margin:0}p+p{margin-top:.75em}
 .section-head.asym > div:last-child{align-items:flex-end;text-align:right}
 .section-head.asym > div:last-child p{max-width:480px}
 
-/* Giant watermark · decorative letterform · DESIGN.md */
-.giant-watermark{position:absolute;font-family:var(--font-display);font-style:italic;font-weight:400;font-size:320px;line-height:.85;color:var(--primary);opacity:.05;pointer-events:none;user-select:none;z-index:0;letter-spacing:-.05em}
-.section-dark .giant-watermark{color:#fff;opacity:.06}
-.cta-band .giant-watermark{color:#fff;opacity:.06}
+/* Giant watermark · decorative letterform */
+.giant-watermark{position:absolute;font-family:var(--font-display);font-style:italic;font-weight:400;font-size:320px;line-height:.85;color:var(--primary);opacity:.08;pointer-events:none;user-select:none;z-index:0;letter-spacing:-.05em}
+.section-dark .giant-watermark{color:#fff;opacity:.08}
 .giant-watermark.top-right{top:-.06em;right:-.04em}
+.giant-watermark.top-left{top:-.06em;left:-.04em}
+.giant-watermark.bottom-right{bottom:-.06em;right:-.04em}
 .giant-watermark.bottom-left{bottom:-.06em;left:-.04em}
 .giant-watermark.center{top:50%;left:50%;transform:translate(-50%,-50%);font-size:380px;opacity:.04}
 
-/* Glass orb · decorative · DESIGN.md */
+/* Glass orb · decorative */
 .glass-orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;z-index:0}
 .glass-orb.aurora{background:var(--glass-aurora);opacity:.35}
 .glass-orb.ice{background:var(--glass-ice);opacity:.6}
@@ -120,7 +121,7 @@ p{margin:0}p+p{margin-top:.75em}
 .section > .highpro-stats,
 .cta-band > .container{position:relative;z-index:2}
 
-/* 05 · Buttons · pill · DESIGN.md */
+/* 05 · Buttons · pill */
 .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:var(--r-pill);font-size:15px;font-weight:500;letter-spacing:.01em;border:1px solid transparent;transition:background .28s ease,transform .18s ease,box-shadow .28s ease,border-color .28s ease,color .28s ease;cursor:pointer;white-space:nowrap;line-height:1;text-decoration:none}
 .btn-primary{background:var(--primary);color:#fff;box-shadow:0 1px 2px rgba(15,18,25,.08)}
 .btn-primary:hover{background:var(--primary-soft);transform:translateY(-1px);box-shadow:0 4px 16px rgba(91,163,181,.20)}
@@ -140,7 +141,7 @@ p{margin:0}p+p{margin-top:.75em}
 .reveal.is-visible,.reveal.visible{opacity:1;transform:translateY(0)}
 .reveal.delay-1{transition-delay:.1s}.reveal.delay-2{transition-delay:.2s}.reveal.delay-3{transition-delay:.3s}.reveal.delay-4{transition-delay:.4s}
 
-/* 07 · Header / Navigation · DESIGN.md sticky 72px */
+/* 07 · Header / Navigation · sticky 72px */
 .nav-global{position:fixed;top:0;left:0;right:0;z-index:1000;height:72px;display:flex;align-items:center;background:rgba(255,255,255,.72);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid rgba(227,232,238,.5);transition:all var(--d-med) var(--ease-out)}
 .nav-global.is-scrolled{background:rgba(255,255,255,.95);border-bottom-color:var(--line);box-shadow:var(--shadow-xs)}
 .nav-global.is-light{background:rgba(15,18,25,.45);border-bottom-color:rgba(255,255,255,.08)}
@@ -180,7 +181,7 @@ p{margin:0}p+p{margin-top:.75em}
 .mobile-nav-sub{padding-left:16px;border-bottom:1px solid var(--line)}
 .mobile-nav-sub a{padding:10px 0;font-size:14px;color:var(--ink-soft)}
 
-/* 08 · Hero · v1.0 */
+/* 08 · Hero */
 .hero{position:relative;min-height:100vh;min-height:100svh;padding:var(--sp-section) 0;display:flex;flex-direction:column;justify-content:center;overflow:hidden;color:#fff;isolation:isolate;background:var(--deep-ink)}
 .hero-slider{position:absolute;inset:0;z-index:-2;overflow:hidden;background:var(--deep-ink)}
 .hero-slider video{width:100%;height:100%;object-fit:cover;opacity:.7;position:absolute;inset:0}
@@ -347,8 +348,8 @@ p{margin:0}p+p{margin-top:.75em}
 .faq-cta{text-align:center;margin-top:48px}
 
 /* 15 · CTA band · dark */
-.cta-band{position:relative;background:radial-gradient(1000px 640px at 10% 110%,rgba(181,176,221,.10),transparent 62%),radial-gradient(900px 600px at 92% -8%,rgba(124,201,214,.10),transparent 60%),linear-gradient(180deg,#1A2530 0%,#0F1219 100%);color:#fff;padding:var(--sp-section) 0;overflow:hidden}
-.cta-inner{display:grid;grid-template-columns:7fr 5fr;gap:64px;align-items:center;position:relative;z-index:2}
+.cta-band{position:relative;background:radial-gradient(1000px 640px at 10% 110%,rgba(181,176,221,.10),transparent 62%),radial-gradient(900px 600px at 92% -8%,rgba(124,201,214,.10),transparent 60%),linear-gradient(180deg,#1A2530 0%,#0F1219 100%);color:#fff;padding:clamp(24px,3.5vw,56px) 0;overflow:hidden}
+.cta-inner{display:grid;grid-template-columns:7fr 5fr;gap:64px;align-items:center;position:relative;z-index:2;padding:12px 0}
 .cta-inner > div:first-child{display:flex;flex-direction:column;gap:16px}
 .cta-inner h3{font-family:var(--font-display);font-weight:400;font-size:40px;line-height:1.1;letter-spacing:-.025em;color:#fff;margin:0}
 .cta-inner h3 em{font-style:italic;color:var(--accent-soft)}
