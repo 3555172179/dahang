@@ -660,7 +660,8 @@ button {
 }
 .hero-slider {
   position: relative;
-  height: 760px;
+  height: min(92vh, 900px);               /* full-viewport hero, feemio style */
+  min-height: 560px;
 }
 .hero-slide {
   position: absolute;
@@ -731,14 +732,14 @@ button {
 }
 /* ---------- 9. Section 通用 ---------- */
 .section {
-  padding: 64px 0;
+  padding: 88px 0;                        /* feemio-style breathing room */
 }
 .section-soft {
   background-color: var(--color-canvas-soft);
 }
 .section-head {
-  max-width: 640px;
-  margin-bottom: 48px;
+  max-width: 720px;
+  margin-bottom: 56px;
 }
 .section-head.center {
   margin-left: auto;
@@ -821,88 +822,68 @@ button {
   object-fit: cover;
   display: block;
 }
-.about-stats-row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
-  padding-top: 32px;
-  border-top: 1px solid var(--color-hairline);
-}
-.about-stats-row li {
-  text-align: center;
-}
-.about-stat-num {
-  display: block;
-  font-size: 36px;
-  font-weight: 600;
-  color: var(--color-primary);
-  line-height: 1.1;
-  font-variant-numeric: tabular-nums;
-  letter-spacing: -0.72px;
-}
-.about-stat-label {
-  display: block;
-  font-size: 13px;
-  color: var(--color-ink-muted);
-  margin-top: 6px;
-}
 
-/* ---------- 10.5 合作品牌 Logo 墙 ---------- */
-.brands-grid {
+/* ---------- 10.5 客户评价 ---------- */
+.testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
-.brand-item {
+.testimonial-card {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 96px;
-  padding: 16px 20px;
-  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease;
-  cursor: pointer;
+  flex-direction: column;
+  background-color: var(--color-canvas);
+  border: 1px solid var(--color-hairline);
   border-radius: 12px;
+  padding: 28px;
+  transition: transform 0.32s ease, box-shadow 0.32s ease, border-color 0.32s ease;
 }
-.brand-item:hover {
-  transform: translateY(-6px) scale(1.03);
-  box-shadow: var(--shadow-xs);
+.testimonial-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-hairline-strong);
+  box-shadow: var(--shadow-md);
 }
-.brand-item img {
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  display: block;
-  filter: grayscale(1) brightness(0.92) contrast(1.1);
-  opacity: 0.75;
-  transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+.testimonial-stars {
+  color: var(--color-accent);
+  font-size: 15px;
+  letter-spacing: 3px;
+  margin-bottom: 14px;
 }
-.brand-item:hover img {
-  filter: grayscale(0) brightness(1) contrast(1);
-  opacity: 1;
-  transform: scale(1.08);
-}
-.brand-text {
-  font-size: 26px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+.testimonial-text {
+  margin: 0 0 20px;
+  font-size: 15px;
+  line-height: 1.6;
   color: var(--color-ink-secondary);
-  white-space: nowrap;
+  flex-grow: 1;                           /* equal-height cards, meta pinned to bottom */
 }
-@media (min-width: 1024px) {
-  /* 桌面 6 列：第 3 行只有 4 个，从第 2 列起显示，实现居中 */
-  .brand-item:nth-child(13) { grid-column: 2; }
+.testimonial-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-hairline);
+}
+.testimonial-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+.testimonial-info {
+  font-size: 13px;
+  color: var(--color-ink-muted);
+}
+.testimonials-note {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--color-ink-faint);
 }
 @media (max-width: 1023px) {
-  .brands-grid { grid-template-columns: repeat(4, 1fr); }
+  .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 767px) {
-  .brands-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
-  .brand-item { height: 68px; padding: 10px 8px; }
-  /* 移动端 3 列：最后 1 个单独一行，居中 */
-  .brand-item:nth-child(16) { grid-column: 2; }
+  .testimonials-grid { grid-template-columns: 1fr; gap: 16px; }
+  .testimonial-card { padding: 22px; }
 }
 
 /* ---------- 11. 工厂实力 / 顶部 tabs + 通屏面板 ---------- */
@@ -1255,6 +1236,46 @@ button {
   color: var(--color-ink-muted);
 }
 
+/* === Factory section — Brand Navy 大色块（feemio-style bold band） === */
+.factory-section {
+  background-color: var(--color-brand-dark);
+  padding: 96px 0;
+}
+.factory-section .section-head h2 { color: var(--color-on-dark); }
+.factory-section .section-head .overline { color: var(--color-accent-soft); }
+.factory-section .section-head p { color: rgba(255, 255, 255, 0.72); }
+.factory-section .highpro-tabs {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+.factory-section .highpro-tab { color: rgba(255, 255, 255, 0.78); }
+.factory-section .highpro-tab:hover { color: #fff; }
+.factory-section .highpro-tab.active {
+  background-color: var(--color-canvas);
+  color: var(--color-primary);
+}
+.factory-section .highpro-stats {
+  margin-top: 56px;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+}
+.factory-section .highpro-stats li {
+  border-left-color: rgba(255, 255, 255, 0.14);
+  padding: 8px 16px;
+}
+.factory-section .hs-num {
+  font-size: 48px;
+  color: var(--color-accent-soft);
+  letter-spacing: -1.4px;
+}
+.factory-section .hs-label { color: rgba(255, 255, 255, 0.66); }
+
+/* === Customer Reviews — Teal Tint 大色块 === */
+.testimonials-section {
+  background-color: var(--color-accent-tint);
+}
+
 /* ---------- 12. Hot Categories / 产品分类 ---------- */
 .category-stage {
   position: relative;
@@ -1379,7 +1400,7 @@ button {
 /* ---------- 13. Write To Us / CTA ---------- */
 .cta-band {
   background-color: var(--color-brand-dark);
-  padding: 64px 0;
+  padding: 80px 0;
   position: relative;
   overflow: hidden;
 }
@@ -1415,89 +1436,191 @@ button {
   line-height: 1.6;
 }
 
-/* ---------- 14. Customization Process（定制流程） ---------- */
+/* ---------- 14. Customization Process (Snake layout) ---------- */
+.process-section {
+  padding: 40px 0 48px;                   /* compact spacing per design.md */
+  background-color: var(--color-canvas-soft);
+}
+.process-section .section-head { margin-bottom: 20px; }
 .process-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 64px;                          /* room for the 3→Mould down arrow */
   margin: 0;
   padding: 0;
   list-style: none;
 }
 .process-item {
-  position: relative;
-  border-radius: 14px;
-  overflow: hidden;
-  border: 1px solid var(--color-hairline);
-  background-color: var(--color-canvas);
-  transition: transform 0.32s ease, box-shadow 0.32s ease, border-color 0.32s ease;
-}
-.process-item:hover {
-  transform: translateY(-4px);
-  border-color: var(--color-hairline-strong);
-  box-shadow: var(--shadow-sm);
-}
-.process-img {
-  position: relative;
-  overflow: hidden;
-  aspect-ratio: 700 / 466;
-  background-color: var(--color-canvas-soft);
-}
-.process-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.process-item:hover .process-img img {
-  transform: scale(1.06);
-}
-.process-img::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(12, 35, 64, 0.05), rgba(12, 35, 64, 0.42));
-}
-.process-step {
-  display: inline-flex;
+  position: relative;                     /* anchor for the arrow pseudo-elements */
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: var(--color-accent);
-  color: #fff;
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 1;
-  font-variant-numeric: tabular-nums;
-  box-shadow: 0 4px 14px rgba(12, 35, 64, 0.18);
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease;
+  text-align: center;
+  padding: 16px 16px 32px;
 }
-.process-item:hover .process-step {
-  transform: scale(1.08);
-  background-color: var(--color-accent-press);
-}
-.process-head {
+
+/* Round title badge (h3 keeps the SEO outline) */
+.process-badge {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 16px 18px 0;
-}
-.process-item h3 {
-  margin: 0;
-  padding: 0;
-  font-size: 15px;
+  text-align: center;
+  width: 96px;
+  height: 96px;
+  padding: 0 14px;                        /* 68px text box → "2D Drawing" wraps to two lines */
+  border-radius: 50%;
+  background-color: var(--color-accent);  /* Crystal Teal — icon accents per design.md */
+  color: var(--color-on-dark);
+  font-size: 16px;
   font-weight: 600;
-  color: var(--color-ink);
+  line-height: 1.15;
+  letter-spacing: 0.2px;
+  flex-shrink: 0;
+  margin: 0 0 16px;
+  cursor: default;
+  transition: transform 0.28s ease, background-color 0.28s ease, box-shadow 0.28s ease;
 }
-.process-item > p {
-  margin: 0;
-  padding: 12px 18px 20px;
-  font-size: 14px;
+/* Badge hover: lift like a card being picked up (design.md) */
+.process-item:hover .process-badge {
+  transform: translateY(-2px);
+  background-color: var(--color-accent-press);
+  box-shadow: var(--shadow-teal);
+}
+.process-desc {
+  margin: 0 0 12px;
+  font-size: 13px;
   line-height: 1.6;
+  color: var(--color-ink-secondary);
+  max-width: 280px;
+  min-height: 63px;                       /* fixed 3-line box keeps every image aligned */
+}
+.process-img {
+  position: relative;
+  width: 100%;
+  max-width: 280px;
+  aspect-ratio: 16 / 10;
+  border-radius: 10px;
+  background-color: var(--color-canvas);
+  transition: box-shadow 0.32s ease;
+}
+.process-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.process-item:hover .process-img img { transform: scale(1.04); }
+.process-item:hover .process-img { box-shadow: var(--shadow-md); }
+
+/* (image-top chevron removed per design) */
+
+/* ----- Dashed arrows between steps -----
+   ::after = dashed line, ::before = solid triangle head.
+   Arrows live on the li itself, so they always follow the card. */
+/* Steps 1–2: arrow pointing right (line ends at the column edge) */
+.process-item:nth-child(1)::after,
+.process-item:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  left: calc(100% - 14px);
+  bottom: 118px;                          /* aligned with the image mid-height */
+  width: 56px;
+  height: 0;
+  border-top: 2px dashed var(--color-accent);
+}
+.process-item:nth-child(1)::before,
+.process-item:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  right: -52px;
+  bottom: 112px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid var(--color-accent);        /* triangle pointing right */
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+}
+
+/* Step 3: arrow pointing down to Mould (same column, next row) */
+.process-item:nth-child(3)::after {
+  content: "";
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  width: 0;
+  height: 40px;
+  border-left: 2px dashed var(--color-accent);
+}
+.process-item:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  top: calc(100% + 48px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 10px solid var(--color-accent);         /* triangle pointing down */
+}
+
+/* Steps 5–6: arrows pointing left (flow runs right → left on row 2) */
+.process-item:nth-child(5)::after,
+.process-item:nth-child(6)::after {
+  content: "";
+  position: absolute;
+  right: calc(100% - 14px);
+  bottom: 118px;
+  width: 56px;
+  height: 0;
+  border-top: 2px dashed var(--color-accent);
+}
+.process-item:nth-child(5)::before,
+.process-item:nth-child(6)::before {
+  content: "";
+  position: absolute;
+  left: -52px;
+  bottom: 112px;
+  width: 0;
+  height: 0;
+  border-right: 10px solid var(--color-accent);       /* triangle pointing left */
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+}
+
+/* Responsive */
+@media (max-width: 1023px) {
+  .process-grid { grid-template-columns: repeat(2, 1fr); row-gap: 40px; }
+  .process-item { padding: 32px 14px 28px; }
+  .process-item::before,
+  .process-item::after { content: none; }  /* arrows only make sense in the 3-col snake */
+}
+@media (max-width: 767px) {
+  .process-section { padding: 24px 0 32px; }
+  .process-section .section-head { margin-bottom: 12px; }
+  .process-grid { grid-template-columns: 1fr; row-gap: 24px; }
+  .process-item { padding: 16px 16px 20px; }
+  .process-badge { width: 72px; height: 72px; font-size: 13px; padding: 0 10px; }
+  .process-desc { font-size: 13px; margin-bottom: 10px; min-height: 0; }
+  .process-img { max-width: 100%; }
+}
+@media (max-width: 640px) {
+  .process-item { padding: 20px 12px 16px; }
+  .process-badge { width: 64px; height: 64px; font-size: 12px; }
+  .process-desc { font-size: 12px; margin-bottom: 12px; }
+}
+
+/* Touch / reduced motion */
+@media (hover: none) and (pointer: coarse) {
+  .process-item:hover .process-img img { transform: none; }
+  .process-item:hover .process-badge {
+    transform: none;
+    background-color: var(--color-accent);
+    box-shadow: none;
+  }
+  .process-item:hover .process-img { box-shadow: none; }
 }
 
 /* ---------- 15. Why Partner With Us ---------- */
@@ -1708,9 +1831,11 @@ button {
 @media (min-width: 768px) and (max-width: 1023px) {
   .display-hero { font-size: 40px; letter-spacing: -1.6px; }
   .display-lg { font-size: 34px; letter-spacing: -1.0px; }
-  .hero-slider { height: 480px; }
+  .section { padding: 64px 0; }
+  .factory-section { padding: 72px 0; }
+  .factory-section .hs-num { font-size: 36px; }
+  .hero-slider { height: 480px; min-height: 0; }
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
-  .about-stats-row { grid-template-columns: repeat(2, 1fr); }
   .stats-grid { grid-template-columns: repeat(3, 1fr); }
   .highpro-stats { grid-template-columns: repeat(5, 1fr); }
   .highpro-split { grid-template-columns: 1fr; gap: 32px; }
@@ -1722,7 +1847,6 @@ button {
   .category-grid { grid-template-columns: repeat(2, 1fr); aspect-ratio: auto; gap: 2px; }
   .category-card { aspect-ratio: 16 / 10; }
   .process-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
-  .process-step { width: 38px; height: 38px; font-size: 14px; }
   .partner-grid { grid-template-columns: 1fr; gap: 20px; }
   .partner-card { padding: 28px 24px 32px; }
   .cta-inner { grid-template-columns: 1fr; gap: 24px; }
@@ -1740,14 +1864,15 @@ button {
   .partner-section .section-head h2 { white-space: normal; }
   .section-head .overline { white-space: normal; }
   .section { padding: 48px 0; }
-  .hero-slider { height: 540px; }
+  .factory-section { padding: 56px 0; }
+  .factory-section .highpro-stats { margin-top: 32px; }
+  .factory-section .hs-num { font-size: 30px; letter-spacing: -0.8px; }
+  .hero-slider { height: 88vh; min-height: 520px; }
   .hero-text .hero-cta { flex-direction: column; align-items: stretch; gap: 12px; }
   .hero-text .hero-cta .btn { width: 100%; min-height: 48px; }
   .hero-title { margin-bottom: 16px; }
   .hero-desc { font-size: 15px; line-height: 1.55; margin-bottom: 24px; }
   .about-grid { grid-template-columns: 1fr; gap: 32px; }
-  .about-stats-row { grid-template-columns: repeat(2, 1fr); gap: 20px; padding-top: 24px; }
-  .about-stat-num { font-size: 28px; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .stat-item { padding: 20px 12px; }
   .stat-num { font-size: 28px; }
@@ -1775,16 +1900,13 @@ button {
   .highpro-stats li:first-child { border-left: none; border-top: none; }
   .highpro-stats li:nth-child(2) { border-top: none; }
   .hs-num { font-size: 26px; }
+  .factory-section .highpro-stats li { border-color: rgba(255, 255, 255, 0.14); }
   .category-grid { grid-template-columns: repeat(2, 1fr); aspect-ratio: auto; gap: 2px; }
   .category-card { aspect-ratio: 4 / 3; }
   .category-name { white-space: normal; font-size: 14px; }
   .category-hero-desc { font-size: 13px; line-height: 1.5; margin-top: 10px; }
   .cta-inner { grid-template-columns: 1fr; gap: 20px; }
   .process-grid { grid-template-columns: 1fr; gap: 12px; }
-  .process-step { width: 36px; height: 36px; font-size: 13px; }
-  .process-head { padding: 12px 14px 0; gap: 8px; }
-  .process-item h3 { font-size: 14px; }
-  .process-item > p { padding: 10px 14px 16px; }
   .partner-grid { grid-template-columns: 1fr; gap: 12px; }
   .partner-card { padding: 28px 24px 32px; }
   .partner-icon { width: 44px; height: 44px; margin-bottom: 16px; }
@@ -1809,15 +1931,12 @@ button {
   .display-hero { font-size: 56px; letter-spacing: -2.8px; }
   .stats-grid { grid-template-columns: repeat(6, 1fr); gap: 24px; }
   .about-grid { grid-template-columns: 5fr 7fr; gap: 88px; }
-  .about-stats-row { grid-template-columns: repeat(4, 1fr); }
 }
 
 /* ---------- 触屏设备适配（无 hover 能力） ---------- */
 @media (hover: none) {
-  /* 品牌墙：直接全彩，去掉 hover 位移 */
-  .brand-item:hover { transform: none; box-shadow: none; }
-  .brand-item img { filter: none; opacity: 1; }
-  .brand-item:hover img { transform: none; }
+  /* 评价卡片：去掉 hover 位移 */
+  .testimonial-card:hover { transform: none; box-shadow: none; border-color: var(--color-hairline); }
 
   /* Industries：遮罩/说明隐藏，图片常显 + 标题居中 */
   .industry-overlay::before,
@@ -1838,7 +1957,6 @@ button {
   .card-product:hover .card-image img,
   .category-card:hover img,
   .process-item:hover .process-img img { transform: none; }
-  .process-item:hover .process-step { transform: scale(1.08); }
 }
 
 /* 减少动画偏好 */
