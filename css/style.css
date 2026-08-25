@@ -1420,6 +1420,9 @@ button {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 .process-item {
   position: relative;
@@ -1456,20 +1459,16 @@ button {
   background: linear-gradient(180deg, rgba(12, 35, 64, 0.05), rgba(12, 35, 64, 0.42));
 }
 .process-step {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  z-index: 2;
-  transform: translate(-50%, -50%);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 52px;
-  height: 52px;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.92);
-  color: var(--color-accent);
-  font-size: 17px;
+  background-color: var(--color-accent);
+  color: #fff;
+  font-size: 15px;
   font-weight: 700;
   line-height: 1;
   font-variant-numeric: tabular-nums;
@@ -1477,16 +1476,28 @@ button {
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease;
 }
 .process-item:hover .process-step {
-  transform: translate(-50%, -50%) scale(1.08);
-  background-color: #fff;
+  transform: scale(1.08);
+  background-color: var(--color-accent-press);
+}
+.process-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 18px 0;
 }
 .process-item h3 {
   margin: 0;
-  padding: 16px 18px;
+  padding: 0;
   font-size: 15px;
   font-weight: 600;
   color: var(--color-ink);
-  text-align: center;
+}
+.process-item > p {
+  margin: 0;
+  padding: 12px 18px 20px;
+  font-size: 14px;
+  line-height: 1.6;
 }
 
 /* ---------- 15. Why Partner With Us ---------- */
@@ -1711,7 +1722,7 @@ button {
   .category-grid { grid-template-columns: repeat(2, 1fr); aspect-ratio: auto; gap: 2px; }
   .category-card { aspect-ratio: 16 / 10; }
   .process-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
-  .process-step { width: 44px; height: 44px; font-size: 15px; }
+  .process-step { width: 38px; height: 38px; font-size: 14px; }
   .partner-grid { grid-template-columns: 1fr; gap: 20px; }
   .partner-card { padding: 28px 24px 32px; }
   .cta-inner { grid-template-columns: 1fr; gap: 24px; }
@@ -1770,8 +1781,10 @@ button {
   .category-hero-desc { font-size: 13px; line-height: 1.5; margin-top: 10px; }
   .cta-inner { grid-template-columns: 1fr; gap: 20px; }
   .process-grid { grid-template-columns: 1fr; gap: 12px; }
-  .process-step { width: 40px; height: 40px; font-size: 14px; }
-  .process-item h3 { padding: 12px 14px; font-size: 14px; }
+  .process-step { width: 36px; height: 36px; font-size: 13px; }
+  .process-head { padding: 12px 14px 0; gap: 8px; }
+  .process-item h3 { font-size: 14px; }
+  .process-item > p { padding: 10px 14px 16px; }
   .partner-grid { grid-template-columns: 1fr; gap: 12px; }
   .partner-card { padding: 28px 24px 32px; }
   .partner-icon { width: 44px; height: 44px; margin-bottom: 16px; }
@@ -1825,7 +1838,7 @@ button {
   .card-product:hover .card-image img,
   .category-card:hover img,
   .process-item:hover .process-img img { transform: none; }
-  .process-item:hover .process-step { transform: translate(-50%, -50%); }
+  .process-item:hover .process-step { transform: scale(1.08); }
 }
 
 /* 减少动画偏好 */

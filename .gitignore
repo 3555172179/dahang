@@ -16,3 +16,25 @@ Thumbs.db
 # Environment
 .env
 .env.local
+
+# --- 站点源码（仅 index.html 及其 css/images/videos 随站点推送） ---
+
+# 文档与源文件
+*.md
+
+# 非 index.html 页面（开发稿 / 后台源码 / 素材页）
+eg.html
+factory_source.html
+source.html
+hotel-hospitality.html
+hotel-hospitality-backend.html
+hotel-hospitality-backend-kche.html
+
+# 本地开发服务器
+server.js
+
+# IDE 工具目录
+.codebuddy/
+
+# 图片备份副本
+images/industries - 副本/
