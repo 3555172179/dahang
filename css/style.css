@@ -389,7 +389,7 @@ p{margin:0}p+p{margin-top:.75em}
   box-shadow:0 14px 32px rgba(91,163,181,.45);
 }
 .process-desc{
-  font-size:14px;line-height:1.6;color:var(--ink-soft);
+  font-size:14px;line-height:1.6;color:var(--ink-soft);font-weight:400;
   margin:0;max-width:240px;
   transition:color var(--d-fast) var(--ease-out),transform var(--d-fast) var(--ease-out);
 }
