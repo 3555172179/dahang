@@ -1380,13 +1380,19 @@
 .home-service .right{
   background:#f9f4ee;
   border-radius:0 10px 10px 0;
-  padding:30px 20px 20px 100px;
+  padding:50px 20px 50px 100px;
   flex:1;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
 }
+.home-service .right .title{ margin-bottom:18px; }
+.home-service .right .text{ margin:0 0 30px; }
 .home-service .right .list{
   display:flex;
   flex-wrap:wrap;
-  margin:16px 0 24px;
+  margin:0 0 40px;
+  gap:24px;
 }
 .home-service .right .list li{
   text-align:center;
@@ -1546,8 +1552,9 @@
 @media (max-width:1024px){
   .home-service .service-flex{ margin-top:20px; flex-direction:column; }
   .home-service .left .img2{ right:20px; }
-  .home-service .right{ padding:20px; }
-  .home-service .title{ font-size:28px; }
+  .home-service .right{ padding:40px 30px; }
+  .home-service .title{ font-size:28px; margin-bottom:14px; }
+  .home-service .right .text{ margin:0 0 24px; }
   .home-service .left{ width:100%; aspect-ratio:inherit; }
   .home-service .infoleft{ width:100%; margin-bottom:20px; }
   .home-service .inforight{ padding-left:0; }
@@ -1556,9 +1563,10 @@
   .home-service{ padding:50px 45px 40px; }   /* add bottom padding so Glassware Customization image doesn't touch the next section */
   .home-service .left .img2{ right:0; width:65%; }
   .home-service .left{ padding:15px 20px; }
-  .home-service .right .list{ justify-content:space-between; margin-bottom:20px; }
+  .home-service .right .list{ justify-content:space-between; margin-bottom:30px; gap:16px; }
   .home-service .right .list li{ width:30%; margin:0; }
   .home-service .right .list li .img{ width:100%; height:auto; aspect-ratio:1/1; }
+  .home-service .right .home-more{ align-self:center; }
 }
 @media (max-width:500px){
   .home-service .title{ font-size:24px; }
