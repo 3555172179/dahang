@@ -1,0 +1,1146 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>ZGS Glass · Homepage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Noto+Sans+SC:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/homepage.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="index homepage-v2">
+
+    <main class="home-page">
+
+        <!-- ===================== Hero Banner (v2 · video bg · centered) ===================== -->
+        <section class="hp-hero" id="hpHero">
+            <div class="hp-hero__stage">
+                <video id="hpHeroVideo" autoplay muted loop playsinline preload="auto"
+                    aria-label="ZGS Glass factory video"></video>
+            </div>
+            <div class="hp-hero__veil" aria-hidden="true"></div>
+
+            <div class="hp-hero__inner container">
+
+                <!-- Slides (centered text) -->
+                <div class="hp-hero__viewport" id="hpHeroViewport">
+                    <ul class="hp-hero__slides" id="hpHeroSlides">
+
+                        <li class="hp-hero__slide is-active" data-slide="0">
+                            <h1 class="hp-hero__title">
+                                Premium Glassware<br />
+                                <em>Crafted for Global Brands</em>
+                            </h1>
+                            <p class="hp-hero__desc">
+                                ZGS Glass is a professional glassware manufacturer with over 22 years of experience in
+                                OEM and ODM service.
+                            </p>
+                            <a href="https://www.zgs-glass.com/products" class="hp-hero__cta">Learn More</a>
+                        </li>
+
+                        <li class="hp-hero__slide" data-slide="1">
+                            <h2 class="hp-hero__title">
+                                <em>8 Production Lines,</em><br />
+                                Built for Scale
+                            </h2>
+                            <p class="hp-hero__desc">
+                                Six automated lines output <em>1.2 million pieces daily</em> — two hand-blown workshops
+                                add craft and character to every order.
+                            </p>
+                            <a href="https://www.zgs-glass.com/company-profile" class="hp-hero__cta">Learn More</a>
+                        </li>
+
+                        <li class="hp-hero__slide" data-slide="2">
+                            <h2 class="hp-hero__title">
+                                Custom Designs<br />
+                                <em>From Concept to Container</em>
+                            </h2>
+                            <p class="hp-hero__desc">
+                                40+ in-house designers launch 3–5 new designs monthly — sampling in 7–10 days, tooling
+                                in 48 hours.
+                            </p>
+                            <a href="https://www.zgs-glass.com/odm-oem" class="hp-hero__cta">Learn More</a>
+                        </li>
+
+                        <li class="hp-hero__slide" data-slide="3">
+                            <h2 class="hp-hero__title">
+                                2-Hour Port Access<br />
+                                <em>to 100+ Countries</em>
+                            </h2>
+                            <p class="hp-hero__desc">
+                                Based in Zibo · 2 hours to Qingdao Port — reliable lead times for retail, hospitality,
+                                F&amp;B and gift brands.
+                            </p>
+                            <a href="https://www.zgs-glass.com/contact-us" class="hp-hero__cta">Learn More</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <!-- Arrows -->
+                <button class="hp-hero__arrow hp-hero__arrow--prev" id="hpHeroPrev" type="button"
+                    aria-label="Previous slide">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <button class="hp-hero__arrow hp-hero__arrow--next" id="hpHeroNext" type="button"
+                    aria-label="Next slide">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+
+                <!-- Dots -->
+                <ol class="hp-hero__dots" id="hpHeroDots" role="tablist" aria-label="Slide navigation">
+                    <li><button class="is-active" type="button" role="tab" aria-selected="true"
+                            aria-label="Slide 1"></button></li>
+                    <li><button type="button" role="tab" aria-selected="false" aria-label="Slide 2"></button></li>
+                    <li><button type="button" role="tab" aria-selected="false" aria-label="Slide 3"></button></li>
+                    <li><button type="button" role="tab" aria-selected="false" aria-label="Slide 4"></button></li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- ===================== about.html (m424) — 1:1 ===================== -->
+        <section class="home-about" id="about">
+            <div class="l-wrap">
+
+                <!-- 左侧视频（原 YouTube 视频） -->
+                <div class="about-img">
+                    <iframe src="https://www.youtube.com/embed/tAlUr31eU8Y" title="ZGS Glass video" loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                </div>
+
+                <!-- 右侧信息（原品牌文字 + m424 布局样式） -->
+                <div class="about-info">
+                    <h2>About ZGS Glass</h2>
+                    <div class="p">Founded in 2004, ZGS Glass (Zibo Great Sailing Light Industrial Products Co., Ltd.)
+                        is a leading custom glassware manufacturer and glassware factory China buyers trust. Our
+                        portfolio covers glass jars, glass vases, glass candle holders, glass beverage dispensers, glass
+                        mason jars and glass decanters — supplying brand owners, wholesalers, hotels, restaurants,
+                        beauty brands, food &amp; beverage companies and home decor retailers across 100+ countries. We
+                        combine lead-free glassware production with hand-blown craftsmanship and borosilicate glass
+                        expertise.</div>
+
+                    <ul class="list">
+                        <li>
+                            <div class="title">
+                                <em>
+                                    <svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="12" r="11" fill="#5BA3B5"/><path d="M7 12 L10.5 15.5 L17 8.5" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </em>
+                                40+ R&amp;D Specialists &amp; IPD System
+                            </div>
+                            <div class="text">40+ in-house designers and engineers run an Integrated Product Development
+                                (IPD) process — launching 3-5 new designs monthly and 10-15 frontier R&amp;D projects each
+                                season.</div>
+                        </li>
+                        <li>
+                            <div class="title">
+                                <em>
+                                    <svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="12" r="11" fill="#5BA3B5"/><path d="M7 12 L10.5 15.5 L17 8.5" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </em>
+                                7-10 Day Samples Worldwide
+                            </div>
+                            <div class="text">Standard samples delivered in 7-10 business days; custom 3D prototypes in
+                                48 hours. Located in Zibo with 2-hour access to Qingdao Port, we ship to 100+ countries
+                                with reliable lead times.</div>
+                        </li>
+                    </ul>
+
+                    <a href="https://www.zgs-glass.com/company-profile" class="home-more" rel="nofollow" title="about us">
+                        Read More 
+                        <em>
+                            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14" />
+                                <path d="M12 5l7 7-7 7" />
+                            </svg>
+                        </em>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===================== Customers Say Section ===================== -->
+        <section class="testimonials" aria-label="Customers Say">
+
+            <!-- Header -->
+            <div class="section-header">
+                <h2 class="section-title">Customers Say</h2>
+                <p class="section-subtitle">We match buyers and sellers of food packaging products. We find the best Food
+                    Products suppliers and manufacturers.</p>
+            </div>
+
+            <!-- Say wrap (carousel) -->
+            <div class="say-wrap">
+
+                <button class="sayswiper-prev" aria-label="Previous" type="button">
+                    <em>‹</em>
+                </button>
+
+                <div class="say-swiper">
+
+                    <!-- Slide 1 — James Burke -->
+                    <div class="say-slide" data-index="0">
+                        <div class="comments">
+                            <div class="icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/>
+                                </svg>
+                            </div>
+                            <p>"Absolutely gorgeous samples and a phenomenal company to work with!! Would recommend to
+                                anyone wanting to purchase products or have a mould tool made."</p>
+                        </div>
+                        <div class="author">
+                            <div class="author-avatar" aria-label="James Burke">JB</div>
+                            <p class="p1">James Burke</p>
+                            <p class="p2">Country: Canada · 2026</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 — Merlin Garcia -->
+                    <div class="say-slide" data-index="1">
+                        <div class="comments">
+                            <div class="icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/>
+                                </svg>
+                            </div>
+                            <p>"I am very pleased with their design and the customized solutions they provided. They
+                                always manage to inspire and enlighten me with new ideas."</p>
+                        </div>
+                        <div class="author">
+                            <div class="author-avatar" aria-label="Merlin Garcia">MG</div>
+                            <p class="p1">Merlin Garcia</p>
+                            <p class="p2">Country: United States · 2025</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 — Randall Schultz -->
+                    <div class="say-slide" data-index="2">
+                        <div class="comments">
+                            <div class="icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/>
+                                </svg>
+                            </div>
+                            <p>"We so appreciated working with Vivian Wei. Communication was easy and sample product was
+                                just as described and ordered. Very quick delivery."</p>
+                        </div>
+                        <div class="author">
+                            <div class="author-avatar" aria-label="Randall Schultz">RS</div>
+                            <p class="p1">Randall Schultz</p>
+                            <p class="p2">Country: United States · 2024</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 — Piper O'Neill -->
+                    <div class="say-slide hidden" data-index="3">
+                        <div class="comments">
+                            <div class="icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/>
+                                </svg>
+                            </div>
+                            <p>"Very responsive and helpful. Excellent communication which helped with our first order.
+                                The samples produced were beautiful and well-made."</p>
+                        </div>
+                        <div class="author">
+                            <div class="author-avatar" aria-label="Piper O'Neill">PO</div>
+                            <p class="p1">Piper O'Neill</p>
+                            <p class="p2">Country: United States · 2024</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5 — Samuel Ng -->
+                    <div class="say-slide hidden" data-index="4">
+                        <div class="comments">
+                            <div class="icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/>
+                                </svg>
+                            </div>
+                            <p>"Product came as scheduled. It's high quality boron and it's worth the price. We are very
+                                satisfied with the demo product. We will look into the purchase of larger quantities."</p>
+                        </div>
+                        <div class="author">
+                            <div class="author-avatar" aria-label="Samuel Ng">SN</div>
+                            <p class="p1">Samuel Ng</p>
+                            <p class="p2">Country: Singapore · 2023</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 6 — Dominique Benward -->
+                    <div class="say-slide hidden" data-index="5">
+                        <div class="comments">
+                            <div class="icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/>
+                                </svg>
+                            </div>
+                            <p>"Product is great quality with quick shipping. Love the order! Recommended."</p>
+                        </div>
+                        <div class="author">
+                            <div class="author-avatar" aria-label="Dominique Benward">DB</div>
+                            <p class="p1">Dominique Benward</p>
+                            <p class="p2">Country: Germany · 2022</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="sayswiper-next" aria-label="Next" type="button">
+                    <em>›</em>
+                </button>
+
+            </div>
+        </section>
+
+        <!-- ===================== Why Choose Us Section ===================== -->
+        <section class="whyus-section" id="whyus">
+            <div class="whyus-section__bg" aria-hidden="true"></div>
+            <div class="container">
+
+                <!-- Top stats strip — orange pill bar (1:1 with reference) -->
+                <ul class="whyus-stats">
+                    <li>
+                        <span class="whyus-stats__num"><strong>22</strong><span class="whyus-stats__unit">+</span></span>
+                        <small class="whyus-stats__label">Years of Glassmaking</small>
+                    </li>
+                    <li>
+                        <span class="whyus-stats__num"><strong>1.2</strong><span class="whyus-stats__unit">M</span></span>
+                        <small class="whyus-stats__label">Pcs Daily Output</small>
+                    </li>
+                    <li>
+                        <span class="whyus-stats__num"><strong>890</strong><span class="whyus-stats__unit">+</span></span>
+                        <small class="whyus-stats__label">Skilled Workers</small>
+                    </li>
+                    <li>
+                        <span class="whyus-stats__num"><strong>50</strong><span class="whyus-stats__unit">K㎡</span></span>
+                        <small class="whyus-stats__label">㎡ Factory Facility</small>
+                    </li>
+                </ul>
+
+                <!-- Centered heading -->
+                <header class="whyus-head">
+                    <h2 class="whyus-head__title">We Serve Glassware Wholesale For Six Sectors Of B2B</h2>
+                    <p class="whyus-head__desc">From stock glass jars and bottles to fully customized drinkware, ZGS Glass serves six B2B sectors with factory-direct wholesale pricing and consistent quality.</p>
+                </header>
+
+                <!-- 3 columns: left features | center video | right features -->
+                <div class="whyus-features">
+
+                    <!-- LEFT features -->
+                    <ul class="whyus-features__list">
+                        <li class="whyus-feature">
+                            <span class="whyus-feature__icon" aria-hidden="true">
+                                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M17 38h30"/>
+                                    <path d="M20 38c1.5-8 6.2-12 12-12s10.5 4 12 12"/>
+                                    <path d="M23 38v5M41 38v5"/>
+                                    <path d="M28 17v15M28 17c-4 1-5 4-5 7 0 2 2 3 5 3M28 17c4 1 5 4 5 7 0 2-2 3-5 3"/>
+                                    <path d="M37 17v15M37 17c4 0 6 2 6 5s-2 5-6 5"/>
+                                    <path d="M18 46h28" opacity=".55"/>
+                                </svg>
+                            </span>
+                            <span class="whyus-feature__label">Hotel &amp; Restaurant Glassware</span>
+                        </li>
+                        <li class="whyus-feature">
+                            <span class="whyus-feature__icon" aria-hidden="true">
+                                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M24 19h16v25c0 3-2 5-5 5h-6c-3 0-5-2-5-5V19Z"/>
+                                    <path d="M23 19h18"/>
+                                    <path d="M27 15h10v4H27z"/>
+                                    <path d="M29 12h6"/>
+                                    <path d="M28 28h8" opacity=".55"/>
+                                    <path d="M43 26c5 1 7 4 7 8 0 4-3 7-7 7"/>
+                                    <path d="M46 24c3-3 5-5 5-8"/>
+                                    <path d="M18 50h32" opacity=".55"/>
+                                </svg>
+                            </span>
+                            <span class="whyus-feature__label">Food &amp; Beverage Glassware</span>
+                        </li>
+                        <li class="whyus-feature">
+                            <span class="whyus-feature__icon" aria-hidden="true">
+                                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M27 20h10v5H27z"/>
+                                    <path d="M29 16h6v4h-6z"/>
+                                    <path d="M24 25h16l2 20c.3 3-2 5-5 5h-10c-3 0-5.3-2-5-5l2-20Z"/>
+                                    <path d="M25 35h14" opacity=".55"/>
+                                    <path d="M44 18c0 3-3 5-3 8 0 2 1.5 3 3 3s3-1 3-3c0-3-3-5-3-8Z"/>
+                                    <path d="M18 50h30" opacity=".55"/>
+                                </svg>
+                            </span>
+                            <span class="whyus-feature__label">Beauty &amp; Cosmetic Glass Packaging</span>
+                        </li>
+                    </ul>
+
+                    <!-- CENTER image (replaces video) — white border + soft outer ring + rotating notch ring (reference) -->
+                    <div class="whyus-media">
+                        <span class="whyus-media__ring" aria-hidden="true"></span>
+                        <div class="whyus-media__circle">
+                            <img src="/images/we_serve_center.png"
+                                 alt="ZGS Glass factory showroom"
+                                 loading="lazy" />
+                        </div>
+                    </div>
+
+                    <!-- RIGHT features -->
+                    <ul class="whyus-features__list whyus-features__list--right">
+                        <li class="whyus-feature">
+                            <span class="whyus-feature__icon" aria-hidden="true">
+                                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 27h28l-2 22H20l-2-22Z"/>
+                                    <path d="M23 27c0-4 3-7 9-7s9 3 9 7"/>
+                                    <path d="M32 20c-1-5-4-8-7-10M32 20c1-5 4-8 7-10"/>
+                                    <path d="M25 12c-3-1-5-3-6-6M39 12c3-1 5-3 6-6"/>
+                                    <path d="M23 35h18M25 42h14" opacity=".5"/>
+                                    <path d="M16 50h32" opacity=".55"/>
+                                </svg>
+                            </span>
+                            <span class="whyus-feature__label">Home Decoration Glassware</span>
+                        </li>
+                        <li class="whyus-feature">
+                            <span class="whyus-feature__icon" aria-hidden="true">
+                                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 18h10l-1 17c-.2 3-1.8 5-4 5s-3.8-2-4-5l-1-17Z"/>
+                                    <path d="M21 40v9M18 49h9"/>
+                                    <path d="M36 18h10l-1 17c-.2 3-1.8 5-4 5s-3.8-2-4-5l-1-17Z"/>
+                                    <path d="M39 40v9M36 49h9"/>
+                                    <path d="M23 14h6M41 14h6" opacity=".55"/>
+                                    <path d="M51 20v8M47 24h8M49 22l4 4M53 22l-4 4" opacity=".7"/>
+                                </svg>
+                            </span>
+                            <span class="whyus-feature__label">Wedding &amp; Events Glassware</span>
+                        </li>
+                        <li class="whyus-feature">
+                            <span class="whyus-feature__icon" aria-hidden="true">
+                                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 27h32v22H16z"/>
+                                    <path d="M14 23h36v7H14z"/>
+                                    <path d="M32 23v26M14 27h36" opacity=".65"/>
+                                    <path d="M32 23c-2-6-7-9-11-7-3 1-3 5 0 7 3 2 7 0 11 0ZM32 23c2-6 7-9 11-7 3 1 3 5 0 7-3 2-7 0-11 0Z"/>
+                                    <path d="M39 35c3 1 5 3 5 6 0 3-2 5-5 5h-2"/>
+                                    <path d="M41 33h5l-1 8c-.2 2-1.5 3-3 3" opacity=".65"/>
+                                </svg>
+                            </span>
+                            <span class="whyus-feature__label">Gift &amp; Custom Branded Glassware</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===================== Product Categories Section ===================== -->
+        <section class="product-section" aria-label="Product Categories">
+
+            <!-- Left 32% Brand Block (via ::before) + Right Content -->
+            <div class="product-section__inner">
+
+                <!-- Top Bar: title on the left (over the colored block), arrows on the right -->
+                <div class="product-section__head">
+                    <h2 class="product-section__title">Product<br>Categories</h2>
+
+                    <div class="product-section__topbar">
+                        <button class="product-section__arrow product-section__arrow--prev" type="button"
+                            aria-label="Previous category" disabled>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="15 18 9 12 15 6" />
+                            </svg>
+                        </button>
+                        <button class="product-section__arrow product-section__arrow--next" type="button"
+                            aria-label="Next category">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="9 18 15 12 9 6" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Horizontal Slider: 7 product categories, each card 400px wide -->
+                <div class="product-grid" data-product-grid>
+
+                    <a href="#" class="product-card">
+                        <div class="product-card__img">
+                            <img src="images/Product Categories/Glass Mason Jars.jpeg"
+                                 alt="Glass Mason Jars Collection" loading="lazy" />
+                        </div>
+                        <div class="product-card__name">Glass Mason Jars</div>
+                    </a>
+
+                    <a href="#" class="product-card">
+                        <div class="product-card__img">
+                            <img src="images/Product Categories/Glass Candle Holders.jpeg"
+                                 alt="Glass Candle Holders Collection" loading="lazy" />
+                        </div>
+                        <div class="product-card__name">Glass Candle Holders</div>
+                    </a>
+
+                    <a href="#" class="product-card">
+                        <div class="product-card__img">
+                            <img src="images/Product Categories/Glass Vases.jpeg"
+                                 alt="Glass Vases Collection" loading="lazy" />
+                        </div>
+                        <div class="product-card__name">Glass Vases</div>
+                    </a>
+
+                    <a href="#" class="product-card">
+                        <div class="product-card__img">
+                            <img src="images/Product Categories/Glass Decanters.jpeg"
+                                 alt="Glass Decanters Collection" loading="lazy" />
+                        </div>
+                        <div class="product-card__name">Glass Decanters</div>
+                    </a>
+
+                    <a href="#" class="product-card">
+                        <div class="product-card__img">
+                            <img src="images/Product Categories/Perfume Bottles.jpeg"
+                                 alt="Perfume Bottles Collection" loading="lazy" />
+                        </div>
+                        <div class="product-card__name">Perfume Bottles</div>
+                    </a>
+
+                    <a href="#" class="product-card">
+                        <div class="product-card__img">
+                            <img src="images/Product Categories/Glass Beverage Dispensers.jpeg"
+                                 alt="Glass Beverage Dispensers Collection" loading="lazy" />
+                        </div>
+                        <div class="product-card__name">Glass Beverage Dispensers</div>
+                    </a>
+
+                    <a href="#" class="product-card">
+                        <div class="product-card__img">
+                            <img src="images/Product Categories/Customization.jpeg"
+                                 alt="Customization Collections" loading="lazy" />
+                        </div>
+                        <div class="product-card__name">Customization Collections</div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             Business Benefits — Tabbed section (Glass Industry Aligned)
+             - 3 tabs: Brand Owners / Multi-Property Chains / Distributors
+             - All copy matches ZGS Glass v5.0 confirmed data
+             ============================================================ -->
+        <section class="business-benefits" id="benefits" aria-label="Business Benefits You Can Expect">
+
+            <!-- Header -->
+            <div class="bb-header">
+                <h2 class="bb-title">Business Benefits You Can Expect</h2>
+                <div class="bb-tabs" id="bbTabs" role="tablist">
+                    <button class="bb-tab active" role="tab" aria-selected="true" data-target="brand"
+                        type="button">For Brand Owners</button>
+                    <button class="bb-tab" role="tab" aria-selected="false" data-target="chain"
+                        type="button">For Multi-Property Chains</button>
+                    <button class="bb-tab" role="tab" aria-selected="false" data-target="distributor"
+                        type="button">For Distributors</button>
+                </div>
+            </div>
+
+            <!-- Card: Brand Owners -->
+            <div class="bb-card active" id="panel-brand" role="tabpanel">
+                <div class="bb-card-header">
+                    <div class="bb-card-title">For Brand Owners</div>
+                    <div class="bb-card-subtitle">Custom glassware from R&amp;D to mass production under one roof
+                    </div>
+                </div>
+                <div class="bb-divider"></div>
+                <div class="bb-grid">
+                    <div class="bb-item">
+                        <div><span class="bb-bullet"></span><span class="bb-label">OEM / ODM Customization</span></div>
+                        <p class="bb-desc">Complete service from R&amp;D and 3D design to custom molding, decoration and
+                            packaging.</p>
+                    </div>
+                    <div class="bb-item">
+                        <div><span class="bb-bullet"></span><span class="bb-label">Weekly New Designs</span></div>
+                        <p class="bb-desc">40+ in-house designers under IPD system release a fresh shape every week.</p>
+                    </div>
+                    <div class="bb-item">
+                        <div><span class="bb-bullet"></span><span class="bb-label">5 Decoration Techniques</span></div>
+                        <p class="bb-desc">Spray color, screen printing, laser engraving, hot stamping and decal
+                            application.</p>
+                    </div>
+                    <div class="bb-item">
+                        <div><span class="bb-bullet"></span><span class="bb-label">Free Sampling</span></div>
+                        <p class="bb-desc">Standard samples in 7-10 business days; custom 3D prototypes in 48 hours.</p>
+                    </div>
+                    <div class="bb-item">
+                        <div><span class="bb-bullet"></span><span class="bb-label">Pantone Color Matching</span></div>
+                        <p class="bb-desc">100+ in-house color cards plus exact Pantone code matching.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card: Multi-Property Chains -->
+            <div class="bb-card" id="panel-chain" role="tabpanel">
+                <div class="bb-card-header">
+                    <div class="bb-card-title">For Multi-Property Chains</div>
+                    <div class="bb-card-subtitle">Industrial-scale supply for hospitality, F&amp;B and retail chains
+                    </div>
+                </div>
+                <div class="bb-divider"></div>
+                <div class="bb-grid">
+                    <div class="bb-item">
+                        <div><span class="bb-bullet"></span><span class="bb-label">1.2M Pieces Daily</span></div>
+                        <p class="bb-desc">8 production lines across a 50,000&#13217; facility, built for retail and
+                            hospitality volume.</p>
+                    </div>
+                    <div class="bb-item">
+                        <div><span class="bb-bullet"></span><span class="bb-label">Bulk Pricing Tiers</span></div>
+                        <p class="bb-desc">Volume discounts at 50K, 100K and 500K+ piece thresholds across FMCG programs.
+                        </p>
+                    </div>
+                    <div class="bb-item">
+                        <div><span class="bb-bullet"></span><span class="bb-label">FDA &amp; LFGB Certified</span></div>
+                        <p class="bb-desc">Per-product food-contact compliance reports available for U.S. and EU markets.
+                        </p>
+                    </div>
+                    <div class="bb-item">
+                        <div><span class="bb-bullet"></span><span class="bb-label">2-Hour Port Access</span></div>
+                        <p class="bb-desc">Based in Zibo with 2-hour highway to Qingdao Port, shipping to 100+ countries.
+                        </p>
+                    </div>
+                    <div class="bb-item">
+                        <div><span class="bb-bullet"></span><span class="bb-label">30-60 Day Production</span></div>
+                        <p class="bb-desc">Sampling in 7-10 business days, mass production in 30-60 days per order
+                            complexity.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card: Distributors -->
+            <div class="bb-card" id="panel-distributor" role="tabpanel">
+                <div class="bb-card-header">
+                    <div class="bb-card-title">For Distributors</div>
+                    <div class="bb-card-subtitle">Regional inventory, priority production and full sales support</div>
+                </div>
+                <div class="bb-divider"></div>
+                <div class="bb-grid">
+                    <div class="bb-item">
+                        <div><span class="bb-bullet"></span><span class="bb-label">Regional Partnership</span></div>
+                        <p class="bb-desc">Carrying regional inventory across our 100+ country distribution network.</p>
+                    </div>
+                    <div class="bb-item">
+                        <div><span class="bb-bullet"></span><span class="bb-label">Priority Production Slots</span></div>
+                        <p class="bb-desc">Distributor orders jump the queue on ZGS production schedules.</p>
+                    </div>
+                    <div class="bb-item">
+                        <div><span class="bb-bullet"></span><span class="bb-label">White-Label Options</span></div>
+                        <p class="bb-desc">Custom branding, private label and bespoke packaging design available.</p>
+                    </div>
+                    <div class="bb-item">
+                        <div><span class="bb-bullet"></span><span class="bb-label">Marketing Assets</span></div>
+                        <p class="bb-desc">Product catalogs, spec sheets, lifestyle photography and sales scripts
+                            provided.</p>
+                    </div>
+                    <div class="bb-item">
+                        <div><span class="bb-bullet"></span><span class="bb-label">6 Product Categories</span></div>
+                        <p class="bb-desc">Glass jars, vases, candle holders, beverage dispensers, mason jars and
+                            decanters.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================== customized-service.html start ======================== -->
+        <section class="home-service">
+
+            <!-- Header -->
+            <h2 class="home-title">Customized Service</h2>
+            <p class="home-des">Our company provides customized services.</p>
+
+            <!-- Row 1: Left (orange) + Right (cream) -->
+            <div class="service-flex">
+                <div class="left">
+                    <div class="text">PROFESSIONAL<br>DESIGN TEAM</div>
+                    <img src="images/component-customization-641x386.png" class="img2" width="641"
+                        height="386" alt="service">
+                </div>
+
+                <div class="right">
+                    <h3 class="title"><span>Component</span>Customization</h3>
+                    <div class="text">Every glass piece ships with a full set of customizable components — lids,
+                        sprayers, racks, handles and finishing touches like paper labels, ribbon ties and woven grass
+ or rattan sleeves. Match every detail to your brand identity and gift-ready presentation.</div>
+
+                    <ul class="list">
+                        <li>
+                            <div class="img">
+                                <img src="https://css02.v15cdn.com/m441/images/service1_2.webp" width="110"
+                                    height="110" alt="Lids and Sprayers">
+                            </div>
+                            <p>Lids &amp; Sprayers</p>
+                        </li>
+                        <li>
+                            <div class="img">
+                                <img src="https://css02.v15cdn.com/m441/images/service1_3.webp" width="110"
+                                    height="110" alt="Racks and Handles">
+                            </div>
+                            <p>Racks &amp; Handles</p>
+                        </li>
+                        <li>
+                            <div class="img">
+                                <img src="https://css02.v15cdn.com/m441/images/service1_3.webp" width="110"
+                                    height="110" alt="Labels, Ribbons and Woven Sleeves">
+                            </div>
+                            <p>Labels &amp; Wraps</p>
+                        </li>
+                    </ul>
+
+                    <a href="/products" rel="nofollow" class="home-more">Read More <em>›</em></a>
+                </div>
+            </div>
+
+            <!-- Row 2: Infoleft + Inforight -->
+            <div class="service-flex">
+                <div class="infoleft">
+                    <h3 class="title"><span>Glassware</span>Customization</h3>
+                    <div class="text">Customize the glass itself — shapes from classic profiles to bespoke molds,
+                        Pantone-matched colors across 100+ shades, decorative finishes from frosted to sprayed, and
+                        size ranges from 50ml to 2L.</div>
+
+                    <ul class="list">
+                        <li>
+                            <div class="icon"><i>✓</i></div>
+                            Shapes
+                        </li>
+                        <li>
+                            <div class="icon"><i>✓</i></div>
+                            Colors
+                        </li>
+                        <li>
+                            <div class="icon"><i>✓</i></div>
+                            Finishes
+                        </li>
+                        <li>
+                            <div class="icon"><i>✓</i></div>
+                            Sizes
+                        </li>
+                    </ul>
+
+                    <a href="/products" rel="nofollow" class="home-more">Read More <em>›</em></a>
+                </div>
+
+                <div class="inforight">
+                    <div class="lazy-wrap">
+                        <img src="https://css02.v15cdn.com/m441/images/service1_4.webp" width="830" height="578"
+                            alt="service">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- ====================== customized-service.html end   ======================== -->
+
+        <!-- ====================== cta.html start ======================== -->
+        <section class="home-foottop">
+            <div class="l-wrap">
+
+                <!-- 左侧：标题 + 描述 -->
+                <div class="left">
+                    <h2 class="p1">Become Our Partner</h2>
+                    <div class="p2">At ZGS Glass, we value partnership and collaboration. We are looking to extend our
+                        reach through cooperating with excellent and passionate business people like you. We believe
+                        that by working together we can discover, develop, and deliver the best value for our
+                        customers.</div>
+                </div>
+
+                <!-- 右侧：电话 CTA 按钮 -->
+                <div class="right">
+                    <a href="tel:+86-574-67059188" rel="nofollow" aria-label="read more">
+                        <em>&#9742;</em>+86-574-67059188
+                    </a>
+                </div>
+
+            </div>
+        </section>
+        <!-- ====================== cta.html end   ======================== -->
+
+        <!-- ====================== cases.html start ======================== -->
+        <section class="home-case">
+            <div class="l-wrap">
+
+                <!-- Top: Title + Nav -->
+                <div class="flex-jc-ai-sb">
+                    <h2 class="home-title">Case Studies</h2>
+                    <div class="flex">
+                        <button class="homecase-prev" type="button" aria-label="Previous slide">
+                            <em><svg viewBox="0 0 32 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M28 12 L4 12"/><path d="M10 6 L4 12 L10 18"/></svg></em>
+                        </button>
+                        <button class="homecase-next" type="button" aria-label="Next slide">
+                            <em><svg viewBox="0 0 32 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12 L28 12"/><path d="M22 6 L28 12 L22 18"/></svg></em>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Slider -->
+                <div id="homecase">
+                    <div class="swiper-wrapper" id="caseWrapper">
+
+                        <div class="swiper-slide">
+                            <div class="img">
+                                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=720&q=80" alt="Distrii Smart Office">
+                            </div>
+                            <div class="info">
+                                <div class="p1">Professional Services 丨Singapore丨 Distrii</div>
+                                <div class="p2">Distrii Uses HDFocus to Develop <br>Smart Office</div>
+                                <div class="line"></div>
+                                <div class="p3">Established in 2016, Distrii stands at the forefront as a premier
+                                    developer of intelligent office solutions. Within a mere three-year span, the
+                                    company has rapidly expanded, establishing over 30 collaborative workspaces
+                                    globally. The company specializes in providing advanced collaboration modes and
+                                    productivity tools. With HDFocus technology, Distrii can produce all kinds of
+                                    meeting environments, from immersive auditoriums, to collaborative meeting rooms.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="img">
+                                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=720&q=80" alt="Sime Darby Remote Meetings">
+                            </div>
+                            <div class="info">
+                                <div class="p1">Manufacturing丨Thailand丨Sime Darby Oils Morakot</div>
+                                <div class="p2">Sime Darby Oils Morakot Offers Seamless Remote Meetings</div>
+                                <div class="line"></div>
+                                <div class="p3">Sime Derby Oils stands as a leading manufacturer of edible oils and
+                                    food ingredients, prioritizing the quality of products and services above all
+                                    else. Responsive communication serves as the linchpin in achieving this
+                                    objective. Leveraging HDFocus solutions, the company facilitates seamless
+                                    collaboration experiences for employees, even in the realm of online meetings.
+                                    The integrated HDFocus solution is effortlessly deployable, fostering creativity
+                                    in every workplace setting.</div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="img">
+                                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=720&q=80" alt="LPTIC Innovation">
+                            </div>
+                            <div class="info">
+                                <div class="p1">Professional Services | Libya | LPTIC</div>
+                                <div class="p2">Transforming Innovation with Interactive HDFocus Solutions</div>
+                                <div class="line"></div>
+                                <div class="p3">LPTIC is a company on the cutting edge of telecom, IT, and post
+                                    services. To maintain its leading position, LPTIC is investing in cutting-edge
+                                    innovative systems. HDFocus aids LPTIC in bringing teams together, fostering
+                                    more meaningful collaboration moments. The HDFocus panel features dual systems
+                                    of Android and Windows, integrating various software solutions. This ensures
+                                    seamless connectivity among teams.</div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="img">
+                                <img src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=720&q=80" alt="Lowe's Experience Center">
+                            </div>
+                            <div class="info">
+                                <div class="p1">Retail丨India丨Lowe's Companies Inc</div>
+                                <div class="p2">Lowe's Designed Dynamic Interactive Experience Center</div>
+                                <div class="line"></div>
+                                <div class="p3">Lowe's, one of the world's largest home improvement retailers, was
+                                    looking for a way to enhance customer experiences. In order to assist customers
+                                    in optimizing their homes and businesses, Lowe's integrated HDFocus displays
+                                    into their venues. Equipped with custom 3D software, HDFocus helped Lowe's
+                                    create an information-rich space where customers can delve into the company's
+                                    history and its latest innovations.</div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="img">
+                                <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?w=720&q=80" alt="PT Hutama Karya Digital">
+                            </div>
+                            <div class="info">
+                                <div class="p1">Construction丨Indonesia丨PT. Hutama Karya (Persero)</div>
+                                <div class="p2">PT. Hutamaarya's Digital Transformation with HDFocus Innovation</div>
+                                <div class="line"></div>
+                                <div class="p3">Technology is reshaping how we work, and leading companies like PT.
+                                    Hutamaarya are at the forefront of this evolution. Recently, the company has
+                                    deployed HDFocus all-in-one technology to enhance the meeting experiences of
+                                    modern workers. This new investment provides a seamless solution for immersive
+                                    collaboration beyond traditional boardrooms. HDFocus enhances everyday
+                                    conversations without the need for additional peripheral devices.</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- 圆点分页器 -->
+                    <div class="homecase-pagination" id="casePagination">
+                        <button class="swiper-pagination-bullet swiper-pagination-bullet-active" type="button" aria-label="Go to slide 1"></button>
+                        <button class="swiper-pagination-bullet" type="button" aria-label="Go to slide 2"></button>
+                        <button class="swiper-pagination-bullet" type="button" aria-label="Go to slide 3"></button>
+                        <button class="swiper-pagination-bullet" type="button" aria-label="Go to slide 4"></button>
+                        <button class="swiper-pagination-bullet" type="button" aria-label="Go to slide 5"></button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- ====================== cases.html end   ======================== -->
+
+    </main>
+
+
+
+    <!-- hls.js for HLS (.m3u8) video support -->
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.13/dist/hls.min.js"></script>
+
+    <script>
+        (function () {
+            'use strict';
+
+            /* -------- Hero video (same HLS source as index.html) -------- */
+            var HERO_VIDEO_SRC = 'https://permalink.dogevideo.com/player/get.m3u8?vcode=7ea243877f29890a&userId=15754&flsign=1e4b3d34357c0f16e9c84d0c96bc9ada&ext=.m3u8';
+
+            function initHeroVideo() {
+                var v = document.getElementById('hpHeroVideo');
+                if (!v) return;
+                function playVideo() {
+                    var p = v.play();
+                    if (p && typeof p.catch === 'function') p.catch(function () { });
+                }
+                if (typeof Hls !== 'undefined' && Hls.isSupported()) {
+                    var hls = new Hls({ maxBufferLength: 30, liveDurationInfinity: true });
+                    hls.loadSource(HERO_VIDEO_SRC);
+                    hls.attachMedia(v);
+                    hls.on(Hls.Events.MANIFEST_PARSED, playVideo);
+                    hls.on(Hls.Events.ERROR, function (e, data) {
+                        if (data && data.fatal) {
+                            switch (data.type) {
+                                case Hls.ErrorTypes.NETWORK_ERROR: hls.startLoad(); break;
+                                case Hls.ErrorTypes.MEDIA_ERROR: hls.recoverMediaError(); break;
+                                default: hls.destroy();
+                            }
+                        }
+                    });
+                } else if (v.canPlayType('application/vnd.apple.mpegurl')) {
+                    v.src = HERO_VIDEO_SRC;
+                    v.addEventListener('loadedmetadata', playVideo);
+                } else {
+                    console.warn('HLS not supported in this browser');
+                }
+            }
+
+            /* -------- Hero slider (centered text over same video) -------- */
+            function initHeroSlider() {
+                var slides = document.querySelectorAll('#hpHeroSlides .hp-hero__slide');
+                var dots = document.querySelectorAll('#hpHeroDots button');
+                var prev = document.getElementById('hpHeroPrev');
+                var next = document.getElementById('hpHeroNext');
+                if (!slides.length) return;
+
+                var idx = 0;
+                var len = slides.length;
+                var timer = null;
+                var AUTOPLAY_MS = 7000;
+
+                function go(n) {
+                    idx = (n + len) % len;
+                    slides.forEach(function (s, i) { s.classList.toggle('is-active', i === idx); });
+                    dots.forEach(function (d, i) {
+                        var on = i === idx;
+                        d.classList.toggle('is-active', on);
+                        d.setAttribute('aria-selected', on ? 'true' : 'false');
+                    });
+                }
+                function start() { stop(); timer = setInterval(function () { go(idx + 1); }, AUTOPLAY_MS); }
+                function stop() { if (timer) { clearInterval(timer); timer = null; } }
+
+                if (prev) prev.addEventListener('click', function () { go(idx - 1); start(); });
+                if (next) next.addEventListener('click', function () { go(idx + 1); start(); });
+                dots.forEach(function (d, i) {
+                    d.addEventListener('click', function () { go(i); start(); });
+                });
+
+                var hero = document.getElementById('hpHero');
+                if (hero) {
+                    hero.addEventListener('mouseenter', stop);
+                    hero.addEventListener('mouseleave', start);
+                }
+
+                start();
+            }
+
+            /* -------- Business Benefits — tab switcher -------- */
+            function initBusinessBenefitsTabs() {
+                var tabs = document.querySelectorAll('#bbTabs .bb-tab');
+                var panels = {
+                    brand: document.getElementById('panel-brand'),
+                    chain: document.getElementById('panel-chain'),
+                    distributor: document.getElementById('panel-distributor')
+                };
+                if (!tabs.length) return;
+
+                tabs.forEach(function (tab) {
+                    tab.addEventListener('click', function () {
+                        var target = tab.getAttribute('data-target');
+                        tabs.forEach(function (t) {
+                            t.classList.remove('active');
+                            t.setAttribute('aria-selected', 'false');
+                        });
+                        tab.classList.add('active');
+                        tab.setAttribute('aria-selected', 'true');
+
+                        Object.keys(panels).forEach(function (k) {
+                            if (panels[k]) panels[k].classList.remove('active');
+                        });
+                        if (panels[target]) panels[target].classList.add('active');
+                    });
+                });
+            }
+
+            /* -------- Testimonials Carousel — group-switch (3-up display, 6 items / 2 groups) -------- */
+            function initTestimonialsCarousel() {
+                var wrap = document.querySelector('.testimonials .say-wrap');
+                if (!wrap) return;
+                var prev = wrap.querySelector('.sayswiper-prev');
+                var next = wrap.querySelector('.sayswiper-next');
+                var slides = wrap.querySelectorAll('.say-slide');
+                if (!slides.length || !prev || !next) return;
+
+                var GROUP_SIZE = 3;
+                var total = slides.length;
+                var groups = Math.ceil(total / GROUP_SIZE);   // 6/3 = 2
+                var groupIdx = 0;                              // 0..1
+
+                function update() {
+                    var start = groupIdx * GROUP_SIZE;
+                    var end = start + GROUP_SIZE;
+                    slides.forEach(function (s, i) {
+                        if (i >= start && i < end) {
+                            s.classList.remove('hidden');
+                        } else {
+                            s.classList.add('hidden');
+                        }
+                    });
+                    prev.classList.toggle('is-disabled', groupIdx === 0);
+                    next.classList.toggle('is-disabled', groupIdx >= groups - 1);
+                    prev.disabled = groupIdx === 0;
+                    next.disabled = groupIdx >= groups - 1;
+                    prev.setAttribute('aria-disabled', groupIdx === 0 ? 'true' : 'false');
+                    next.setAttribute('aria-disabled', groupIdx >= groups - 1 ? 'true' : 'false');
+                }
+
+                prev.addEventListener('click', function () {
+                    if (groupIdx > 0) { groupIdx--; update(); }
+                });
+                next.addEventListener('click', function () {
+                    if (groupIdx < groups - 1) { groupIdx++; update(); }
+                });
+
+                update();
+            }
+
+            /* -------- Product Categories — horizontal slider with disabled arrows -------- */
+            function initProductCategoriesSlider() {
+                var grid = document.querySelector('[data-product-grid]');
+                if (!grid) return;
+                var prev = document.querySelector('.product-section__arrow--prev');
+                var next = document.querySelector('.product-section__arrow--next');
+                if (!prev || !next) return;
+
+                var STEP = 430;   // card 400 + gap 30
+
+                function update() {
+                    var max = grid.scrollWidth - grid.clientWidth;
+                    if (max <= 0) {
+                        prev.disabled = true;
+                        next.disabled = true;
+                        return;
+                    }
+                    prev.disabled = grid.scrollLeft <= 1;
+                    next.disabled = grid.scrollLeft >= max - 1;
+                }
+
+                prev.addEventListener('click', function () {
+                    grid.scrollBy({ left: -STEP, behavior: 'smooth' });
+                });
+                next.addEventListener('click', function () {
+                    grid.scrollBy({ left: STEP, behavior: 'smooth' });
+                });
+
+                grid.addEventListener('scroll', update, { passive: true });
+                window.addEventListener('resize', update);
+                update();
+            }
+
+            /* -------- Case Studies — slide carousel (cases.html) -------- */
+            function initCaseStudiesSlider() {
+                var wrapper = document.getElementById('caseWrapper');
+                if (!wrapper) return;
+                var slides = wrapper.querySelectorAll('.swiper-slide');
+                var prev = document.querySelector('.homecase-prev');
+                var next = document.querySelector('.homecase-next');
+                var bullets = document.querySelectorAll('#casePagination .swiper-pagination-bullet');
+                if (!slides.length || !prev || !next) return;
+                var idx = 0;
+                var total = slides.length;
+
+                function update() {
+                    wrapper.style.transform = 'translate3d(' + (-idx * 100) + '%, 0, 0)';
+                    for (var i = 0; i < bullets.length; i++) {
+                        if (i === idx) {
+                            bullets[i].classList.add('swiper-pagination-bullet-active');
+                        } else {
+                            bullets[i].classList.remove('swiper-pagination-bullet-active');
+                        }
+                    }
+                }
+
+                prev.addEventListener('click', function () {
+                    idx = (idx - 1 + total) % total;
+                    update();
+                });
+                next.addEventListener('click', function () {
+                    idx = (idx + 1) % total;
+                    update();
+                });
+                for (var j = 0; j < bullets.length; j++) {
+                    (function (i) {
+                        bullets[i].addEventListener('click', function () {
+                            idx = i;
+                            update();
+                        });
+                    })(j);
+                }
+                update();
+            }
+
+            document.addEventListener('DOMContentLoaded', function () {
+                initHeroVideo();
+                initHeroSlider();
+                initBusinessBenefitsTabs();
+                initTestimonialsCarousel();
+                initProductCategoriesSlider();
+                initCaseStudiesSlider();
+            });
+        })();
+    </script>
+</body>
+
+</html>
