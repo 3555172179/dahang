@@ -1124,13 +1124,13 @@
   max-height:600px;
 }
 
-/* ---------- Left 32% Brand Block (m442 reference) ---------- */
+/* ---------- Left Brand Block (m442 reference) ---------- */
 .product-section::before{
   content:"";
   position:absolute;
   left:0;
   top:0;
-  width:32%;
+  width:42%;
   height:100%;
   background:var(--primary);
   z-index:0;
