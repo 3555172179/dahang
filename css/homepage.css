@@ -1520,6 +1520,8 @@
   border:none;
   cursor:pointer;
   font-family:inherit;
+  align-self:flex-start;
+  width:fit-content;
 }
 .home-service .home-more em{
   background:var(--color2);
@@ -1566,7 +1568,7 @@
   .home-service .right .list{ justify-content:space-between; margin-bottom:30px; gap:16px; }
   .home-service .right .list li{ width:30%; margin:0; }
   .home-service .right .list li .img{ width:100%; height:auto; aspect-ratio:1/1; }
-  .home-service .right .home-more{ align-self:center; }
+  .home-service .right .home-more{ align-self:center; width:fit-content; }
 }
 @media (max-width:500px){
   .home-service .title{ font-size:24px; }
