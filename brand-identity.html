@@ -79,31 +79,6 @@
     overflow: hidden;
   }
 
-  .glass-orb {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(80px);
-    pointer-events: none;
-    z-index: 0;
-  }
-  .glass-orb--teal  { background: var(--glass-aurora); opacity: 0.35; }
-  .glass-orb--ice   { background: var(--glass-ice);    opacity: 0.6;  }
-  .glass-orb--glow  { background: var(--glass-glow);   opacity: 0.4;  }
-
-  .giant-watermark {
-    font-family: var(--font-display);
-    font-weight: 400;
-    color: var(--primary);
-    line-height: 0.85;
-    letter-spacing: -0.05em;
-    user-select: none;
-    pointer-events: none;
-    position: absolute;
-    z-index: 0;
-    opacity: 0.05;
-  }
-  .giant-watermark--dark { color: #FFFFFF; opacity: 0.04; }
-
   .overline {
     font-family: var(--font-body);
     text-transform: uppercase;
@@ -495,17 +470,6 @@
     transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), box-shadow 0.4s ease;
     cursor: pointer;
   }
-  .product-card::before {
-    content: "";
-    position: absolute;
-    top: -40%; right: -40%;
-    width: 80%; height: 80%;
-    background: radial-gradient(circle, var(--glass-glow) 0%, transparent 70%);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    pointer-events: none;
-    z-index: 1;
-  }
   .product-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 20px 48px rgba(15,18,25,0.12);
@@ -807,10 +771,6 @@
 
 <!-- ===== 0 — Hero ===== -->
 <section class="hero">
-  <div class="glass-orb glass-orb--teal" style="width:600px;height:600px;top:-200px;right:-100px;"></div>
-  <div class="glass-orb glass-orb--ice" style="width:480px;height:480px;bottom:-150px;left:-100px;"></div>
-  <div class="glass-orb glass-orb--glow" style="width:320px;height:320px;top:40%;right:30%;opacity:0.25;"></div>
-  <div class="giant-watermark" style="top:-40px;right:-20px;font-size:360px;">Z</div>
 
   <div class="container">
     <div class="overline hero-overline">Brand Identity System v1.0 · 2026</div>
@@ -848,7 +808,6 @@
 
 <!-- ===== 1 — Logo ===== -->
 <section class="section section-soft" id="logo">
-  <div class="glass-orb glass-orb--ice" style="width:400px;height:400px;top:10%;right:-100px;opacity:0.5;"></div>
 
   <div class="container">
     <div class="section-header">
@@ -873,7 +832,6 @@
 
 <!-- ===== 2 — Color ===== -->
 <section class="section" id="color">
-  <div class="glass-orb glass-orb--glow" style="width:480px;height:480px;top:20%;left:-150px;opacity:0.3;"></div>
 
   <div class="container">
     <div class="section-header">
@@ -942,7 +900,6 @@
 
 <!-- ===== 3 — Typography ===== -->
 <section class="section section-tint" id="type">
-  <div class="giant-watermark" style="bottom:-.06em;left:-.04em;font-size:280px;">T</div>
 
   <div class="container">
     <div class="section-header">
@@ -988,7 +945,6 @@
 
 <!-- ===== 4 — Components ===== -->
 <section class="section" id="components">
-  <div class="glass-orb glass-orb--ice" style="width:360px;height:360px;bottom:10%;right:-100px;opacity:0.4;"></div>
 
   <div class="container">
     <div class="section-header">
@@ -1022,7 +978,6 @@
 
 <!-- ===== 5 — Products ===== -->
 <section class="section section-soft" id="products">
-  <div class="glass-orb glass-orb--glow" style="width:400px;height:400px;top:0;left:10%;opacity:0.3;"></div>
 
   <div class="container">
     <div class="section-header asymmetric-feature">
@@ -1113,9 +1068,6 @@
 
 <!-- ===== 6 — Capability ===== -->
 <section class="section section-dark" id="capability">
-  <div class="glass-orb glass-orb--teal" style="width:600px;height:600px;top:-200px;left:-100px;opacity:0.25;"></div>
-  <div class="glass-orb glass-orb--glow" style="width:400px;height:400px;bottom:-100px;right:-50px;opacity:0.20;"></div>
-  <div class="giant-watermark giant-watermark--dark" style="top:-40px;right:-20px;font-size:360px;">G</div>
 
   <div class="container">
     <div class="section-header">
@@ -1219,7 +1171,6 @@
 
 <!-- ===== Footer ===== -->
 <footer class="footer">
-  <div class="glass-orb glass-orb--ice" style="width:480px;height:480px;top:-100px;right:-100px;opacity:0.15;"></div>
 
   <div class="container">
     <div class="footer-grid">
