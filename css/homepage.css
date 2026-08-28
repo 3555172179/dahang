@@ -50,11 +50,14 @@
   position:relative;
   z-index:2;
   width:100%;
+  height:100%;                  /* stretch to hero so absolute dots bottom=20px is truly at hero bottom */
+  min-height:inherit;
+  align-self:stretch;           /* override hero's align-items:center so inner fills hero height */
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:center;
-  padding:120px 48px 140px;   /* extra bottom padding so dots never overlap content */
+  padding:120px 48px 140px;
   text-align:center;
 }
 
@@ -192,7 +195,7 @@
 /* ---------- 09 · Dots ---------- */
 .hp-hero__dots{
   position:absolute;
-  bottom:32px;                    /* close to bottom edge, well below CTA */
+  bottom:20px;                    /* close to bottom edge, well below CTA */
   left:50%;
   transform:translateX(-50%);
   display:inline-flex;
@@ -236,7 +239,7 @@
   .hp-hero__arrow{ width:44px; height:44px; }
   .hp-hero__arrow--prev{ left:12px; }
   .hp-hero__arrow--next{ right:12px; }
-  .hp-hero__dots{ bottom:24px; }
+  .hp-hero__dots{ bottom:16px; }
 }
 @media (max-width:560px){
   .hp-hero__title{ font-size:34px; line-height:1.1; }
@@ -802,14 +805,38 @@
 }
 .testimonials .sayswiper-prev em,
 .testimonials .sayswiper-next em{
-  font-size:28px;
+  font-size:22px;
   color:var(--primary);
   font-style:normal;
   line-height:1;
+  position:absolute;             /* truly center the glyph inside the round button */
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:auto;
+  height:auto;
+  margin:0;
+  padding:0;
   transition:color .2s linear;
 }
 .testimonials .sayswiper-prev:hover em,
 .testimonials .sayswiper-next:hover em{
+  color:#ffffff;
+}
+.testimonials .sayswiper-prev svg,
+.testimonials .sayswiper-next svg{
+  width:22px;
+  height:22px;
+  color:var(--primary);
+  position:absolute;             /* perfectly center SVG inside the round button */
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  display:block;
+  transition:color .2s linear;
+}
+.testimonials .sayswiper-prev:hover svg,
+.testimonials .sayswiper-next:hover svg{
   color:#ffffff;
 }
 .testimonials .sayswiper-prev{ left:0; }
@@ -1526,7 +1553,7 @@
   .home-service .inforight{ padding-left:0; }
 }
 @media (max-width:768px){
-  .home-service{ padding:50px 45px 0; }
+  .home-service{ padding:50px 45px 40px; }   /* add bottom padding so Glassware Customization image doesn't touch the next section */
   .home-service .left .img2{ right:0; width:65%; }
   .home-service .left{ padding:15px 20px; }
   .home-service .right .list{ justify-content:space-between; margin-bottom:20px; }
@@ -1647,14 +1674,15 @@
   .home-foottop .l-wrap{ padding:0 30px; }
 }
 @media (max-width:768px){
-  .home-foottop{ padding:50px 0 0; }
+  .home-foottop{ padding:80px 0 50px; }
   .home-foottop .left .p1{ font-size:var(--fontsize20); }
-  .home-foottop .right{ margin-top:20px; width:100%; }
-  .home-foottop .right a{ min-width:220px; height:50px; width:100%; }
+  .home-foottop .right{ margin-top:20px; width:100%; display:flex; justify-content:center; }
+  .home-foottop .right a{ min-width:260px; max-width:320px; height:50px; }
 }
 @media (max-width:500px){
-  .home-foottop{ padding:50px 0 0; }
+  .home-foottop{ padding:90px 0 40px; }
   .home-foottop .left{ margin-bottom:20px; }
+  .home-foottop .right a{ min-width:240px; max-width:300px; }
 }
 
 /* ============================================================
