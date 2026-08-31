@@ -1627,7 +1627,7 @@
    ============================================================ */
 .home-news{
   padding:80px 0;
-  background:var(--bg,#f8fafb);
+  background:#f1f5f9;
   position:relative;
   z-index:1;
 }
