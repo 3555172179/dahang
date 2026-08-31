@@ -10,6 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Noto+Sans+SC:wght@400;500;600&display=swap"
         rel="stylesheet" />
+    <link rel="stylesheet" href="https://css02.v15cdn.com/m442/fonts/iconfont.css" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link href="css/homepage.css" rel="stylesheet" type="text/css" />
 </head>
@@ -541,53 +542,39 @@
         </section>
 
         <!-- ============================================================
-            Business Benefits — m441 spec (Are You A…)
-            - Two side-by-side cards: Brand Owners / Multi-Property Chains
-            - Third tab content (Distributors) dropped per request
-            - HTML structure 1:1 from user-provided m441 template
+            Business Benefits — m442 sourcing layout
+            - Two 50/50 panels: Brand Owners / Multi-Property Chains
+            - Hexagonal icon tile + iconfont glyph + title + tagline
+            - HTML structure: 1:1 from m442 `.home-sourcing` template
+            - Tokens (color / font): site design system
             ============================================================ -->
-        <section class="home-are" id="benefits" aria-label="Are You A...">
+        <section class="home-sourcing" id="benefits" aria-label="Are You A...">
 
-            <div class="home-title">Business Benefits You Can Expect</div>
+            <div class="l-wrap">
 
-            <div class="areflex">
+                <h4 class="home-title">Business Benefits You Can Expect</h4>
 
-                <!-- For Brand Owners -->
-                <div class="areitem areitem--light">
-                    <div class="arebg"></div>
-                    <div class="arecontent">
-                        <div class="areicon"></div>
-                        <div class="areh3">For Brand Owners</div>
-                        <div class="areem">Custom glassware from R&amp;D to mass production under one roof</div>
-                        <ul>
-                            <li>OEM / ODM Customization — Complete service from R&amp;D and 3D design to custom molding, decoration and packaging.</li>
-                            <li>Weekly New Designs — 40+ in-house designers under IPD system release a fresh shape every week.</li>
-                            <li>5 Decoration Techniques — Spray color, screen printing, laser engraving, hot stamping and decal application.</li>
-                            <li>Free Sampling — Standard samples in 7-10 business days; custom 3D prototypes in 48 hours.</li>
-                            <li>Pantone Color Matching — 100+ in-house color cards plus exact Pantone code matching.</li>
-                        </ul>
-                        <a href="#brand-owners" class="arem">Read More <em></em></a>
-                    </div>
-                </div>
+                <ul class="sourcinglist">
 
-                <!-- For Multi-Property Chains -->
-                <div class="areitem">
-                    <div class="arebg"></div>
-                    <div class="arecontent">
-                        <div class="areicon"></div>
-                        <div class="areh3">For Multi-Property Chains</div>
-                        <div class="areem">Industrial-scale supply for hospitality, F&amp;B and retail chains</div>
-                        <ul>
-                            <li>1.2M Pieces Daily — 8 production lines across a 50,000&#13217; facility, built for retail and hospitality volume.</li>
-                            <li>Bulk Pricing Tiers — Volume discounts at 50K, 100K and 500K+ piece thresholds across FMCG programs.</li>
-                            <li>FDA &amp; LFGB Certified — Per-product food-contact compliance reports available for U.S. and EU markets.</li>
-                            <li>2-Hour Port Access — Based in Zibo with 2-hour highway to Qingdao Port, shipping to 100+ countries.</li>
-                            <li>30-60 Day Production — Sampling in 7-10 business days, mass production in 30-60 days per order complexity.</li>
-                        </ul>
-                        <a href="#multi-property-chains" class="arem">Read More <em></em></a>
-                    </div>
-                </div>
+                    <!-- For Brand Owners -->
+                    <li>
+                        <div class="icon"><em class="iconfont icon-gexingdingzhi"></em></div>
+                        <div class="text">
+                            <p class="p1">For Brand Owners</p>
+                            <p class="p2">Custom glassware from R&amp;D to mass production under one roof.</p>
+                        </div>
+                    </li>
 
+                    <!-- For Multi-Property Chains -->
+                    <li>
+                        <div class="icon"><em class="iconfont icon-chanchuyangpin"></em></div>
+                        <div class="text">
+                            <p class="p1">For Multi-Property Chains</p>
+                            <p class="p2">Industrial-scale supply for hospitality, F&amp;B and retail chains.</p>
+                        </div>
+                    </li>
+
+                </ul>
             </div>
         </section>
 
@@ -651,19 +638,19 @@
                     <ul class="list">
                         <li>
                             <div class="icon"><i>✓</i></div>
-                            Shapes
+                            Classic round, square, oval and bespoke molded shapes
                         </li>
                         <li>
                             <div class="icon"><i>✓</i></div>
-                            Colors
+                            Translucent, opaque, gradient and brand-book matched colors
                         </li>
                         <li>
                             <div class="icon"><i>✓</i></div>
-                            Finishes
+                            Matte, gloss, textured and tactile finishes for brand identity
                         </li>
                         <li>
                             <div class="icon"><i>✓</i></div>
-                            Sizes
+                            Capacities built for retail, hospitality and bulk beverage use
                         </li>
                     </ul>
 
