@@ -544,7 +544,9 @@
         <!-- ============================================================
             Business Benefits — m442 sourcing layout
             - Two 50/50 panels: Brand Owners / Multi-Property Chains
-            - Hexagonal icon tile + iconfont glyph + title + tagline
+            - Rounded-square icon tile (top-left) + iconfont glyph + h3
+              title + tagline paragraph + 5-item benefit list + Read More
+            - Section title is H2; each card title is H3
             - HTML structure: 1:1 from m442 `.home-sourcing` template
             - Tokens (color / font): site design system
             ============================================================ -->
@@ -552,26 +554,38 @@
 
             <div class="l-wrap">
 
-                <h4 class="home-title">Business Benefits You Can Expect</h4>
+                <h2 class="home-title">Business Benefits You Can Expect</h2>
 
                 <ul class="sourcinglist">
 
                     <!-- For Brand Owners (light panel — 1st) -->
                     <li>
                         <div class="icon"><em class="iconfont icon-gexingdingzhi"></em></div>
-                        <div class="text">
-                            <p class="p1">For Brand Owners</p>
-                            <p class="p2">Custom glassware from R&amp;D to mass production under one roof.</p>
-                        </div>
+                        <h3 class="h3">For Brand Owners</h3>
+                        <p class="p2">Custom glassware from R&amp;D to mass production under one roof.</p>
+                        <ul class="prolist">
+                            <li><strong>OEM / ODM Customization</strong> — Complete service from R&amp;D and 3D design to custom molding, decoration and packaging.</li>
+                            <li><strong>Weekly New Designs</strong> — 40+ in-house designers under IPD system release a fresh shape every week.</li>
+                            <li><strong>5 Decoration Techniques</strong> — Spray color, screen printing, laser engraving, hot stamping and decal application.</li>
+                            <li><strong>Free Sampling</strong> — Standard samples in 7-10 business days; custom 3D prototypes in 48 hours.</li>
+                            <li><strong>Pantone Color Matching</strong> — 100+ in-house color cards plus exact Pantone code matching.</li>
+                        </ul>
+                        <a href="javascript:;" class="readmore">Read More <em class="arrow">&rarr;</em></a>
                     </li>
 
                     <!-- For Multi-Property Chains (primary panel — 2nd) -->
                     <li>
                         <div class="icon"><em class="iconfont icon-chanchuyangpin"></em></div>
-                        <div class="text">
-                            <p class="p1">For Multi-Property Chains</p>
-                            <p class="p2">Industrial-scale supply for hospitality, F&amp;B and retail chains.</p>
-                        </div>
+                        <h3 class="h3">For Multi-Property Chains</h3>
+                        <p class="p2">Industrial-scale supply for hospitality, F&amp;B and retail chains.</p>
+                        <ul class="prolist">
+                            <li><strong>1.2M Pieces Daily</strong> — 8 production lines across a 50,000㎡ facility, built for retail and hospitality volume.</li>
+                            <li><strong>Bulk Pricing Tiers</strong> — Volume discounts at 50K, 100K and 500K+ piece thresholds across FMCG programs.</li>
+                            <li><strong>FDA &amp; LFGB Certified</strong> — Per-product food-contact compliance reports available for U.S. and EU markets.</li>
+                            <li><strong>2-Hour Port Access</strong> — Based in Zibo with 2-hour highway to Qingdao Port, shipping to 100+ countries.</li>
+                            <li><strong>30-60 Day Production</strong> — Sampling in 7-10 business days, mass production in 30-60 days per order complexity.</li>
+                        </ul>
+                        <a href="javascript:;" class="readmore">Read More <em class="arrow">&rarr;</em></a>
                     </li>
 
                 </ul>
