@@ -1092,6 +1092,35 @@
   border-radius:9999px;
   background:#fff;
 }
+
+/* ------------------------------------------------------------
+   Light variant — Brand Owners card
+   Pale sky/mint backdrop + dark ink + primary accents
+   ------------------------------------------------------------ */
+.areitem--light .arebg{
+  background:
+    radial-gradient(circle at 18% 0%, rgba(255,255,255,.85) 0%, transparent 55%),
+    linear-gradient(155deg, #F0F7F9 0%, #D7E9EE 100%);
+}
+.areitem--light .areicon{
+  background:rgba(15,140,170,.10);
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none' stroke='%230F8CAA' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'><path d='M6 24 L16 6 L26 24 Z'/><path d='M11 24 L16 16 L21 24'/><circle cx='16' cy='6' r='1.4' fill='%230F8CAA'/></svg>");
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:32px 32px;
+}
+.areitem--light .areh3{ color:var(--ink); }
+.areitem--light .areem{ color:var(--ink-soft); }
+.areitem--light ul li{ color:var(--ink-soft); }
+.areitem--light ul li::before{ background:var(--primary); }
+.areitem--light .arem{
+  color:var(--primary);
+  border-color:rgba(15,140,170,.35);
+}
+.areitem--light .arem:hover{ border-color:var(--primary); }
+.areitem--light .arem em{
+  background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230F8CAA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M5 12h14'/><path d='M13 6l6 6-6 6'/></svg>") center/contain no-repeat;
+}
 .arem{
   display:inline-flex;
   align-items:center;
