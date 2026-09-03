@@ -918,31 +918,12 @@
   height:70px;
   border-radius:50%;
   margin:0 auto;
-  background:var(--primary-tint);
-  color:var(--primary);
   border:2px solid #ffffff;
   box-shadow:0 0 0 1px rgba(91,163,181,0.18);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-family:var(--font-display);
-  font-size:24px;
-  font-weight:600;
-  letter-spacing:.5px;
-}
-/* 6 张头像颜色循环：1=Primary（主色），2=Violet Edge，3=Primary，
-   4=Amber Spark，5=Primary，6=Rose Whisper — 全部取自 DESIGN.md 折射装饰色 */
-.testimonials .say-slide:nth-child(2) .author-avatar{
-  background:rgba(181,176,221,0.22);   /* Violet Edge 浅版 */
-  color:#7A6F9F;                        /* Violet 深版 */
-}
-.testimonials .say-slide:nth-child(4) .author-avatar{
-  background:rgba(240,200,150,0.28);   /* Amber Spark 浅版 */
-  color:#8A6135;                        /* Amber 深版 */
-}
-.testimonials .say-slide:nth-child(6) .author-avatar{
-  background:rgba(229,197,197,0.30);   /* Rose Whisper 浅版 */
-  color:#9B5757;                        /* Rose 深版 */
+  display:block;
+  object-fit:cover;
+  object-position:center;
+  background:#eef2f4;   /* 图片加载完成前的占位底 */
 }
 .testimonials .author .p1{
   font-weight:600;
