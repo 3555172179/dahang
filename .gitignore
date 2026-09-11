@@ -17,24 +17,46 @@ Thumbs.db
 .env
 .env.local
 
-# --- 站点源码（仅 index.html 及其 css/images/videos 随站点推送） ---
-
-# 文档与源文件
+# 文档 / 本地工具 / IDE 目录
 *.md
-
-# 非 index.html 页面（开发稿 / 后台源码 / 素材页）
-eg.html
-factory_source.html
-source.html
-hotel-hospitality.html
-hotel-hospitality-backend.html
-hotel-hospitality-backend-kche.html
-
-# 本地开发服务器
 server.js
-
-# IDE 工具目录
 .codebuddy/
 
-# 图片备份副本
-images/industries - 副本/
+# ============================================================
+# 站点源码白名单：仅跟踪 homepage.html 及其依赖的 css / images
+# 除此之外的一切（其它页面、草稿、备份、素材）全部排除
+# ============================================================
+
+# 1) 先排除根目录下所有内容
+/*
+
+# 2) 放行 gitignore 自身与首页
+!/.gitignore
+!/homepage.html
+
+# 3) 放行样式目录，但只保留首页用到的两个 css
+!/css
+/css/*
+!/css/style.css
+!/css/homepage.css
+
+# 4) 放行图片目录（逐级放行后再指定具体文件）
+!/images
+/images/*
+
+!/images/avatars
+/images/avatars/*
+!/images/avatars/candidates
+/images/avatars/candidates/*
+!/images/avatars/candidates/*.png
+
+!/images/Product Categories
+/images/Product Categories/*
+!/images/Product Categories/*.jpeg
+
+!/images/Glassware Customization.png
+!/images/homechoose.webp
+!/images/labels-wraps-300x300.png
+!/images/lids-sprayers-300x300.png
+!/images/racks-handles-300x300.png
+!/images/we_serve_center.png
