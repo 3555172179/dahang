@@ -1931,4 +1931,65 @@
   .home-about .about-info{ padding:0; margin-top:20px; }
 }
 
+/* ============================================================
+   Floating side badge (Canton Fair) — right edge, 25% from top
+   - fixed to the right, aligned at 25% of the viewport height
+   - z-index 900 (global nav is 1000, mobile nav 200)
+   ============================================================ */
+.hp-float-badge{
+  position:fixed;
+  top:25%;
+  right:18px;
+  z-index:900;
+  width:132px;
+  display:block;
+  text-decoration:none;
+  filter:drop-shadow(0 10px 26px rgba(15,18,25,.18));
+  animation:hp-float-badge-in .6s .3s both cubic-bezier(.22,.61,.36,1);
+}
+.hp-float-badge__link{ display:block; text-decoration:none; }
+.hp-float-badge img{
+  display:block;
+  width:100%;
+  height:auto;
+  transition:transform .35s cubic-bezier(.22,.61,.36,1);
+}
+.hp-float-badge:hover img{ transform:translateY(-4px) scale(1.03); }
+
+.hp-float-badge__close{
+  position:absolute;
+  top:-8px;
+  right:-8px;
+  width:22px;
+  height:22px;
+  padding:0;
+  border:1px solid #E3E8EE;
+  border-radius:50%;
+  background:#fff;
+  color:#6B7C86;
+  font-size:13px;
+  line-height:1;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 2px 6px rgba(15,18,25,.12);
+  transition:all .25s ease;
+}
+.hp-float-badge__close:hover{ background:#5BA3B5; border-color:#5BA3B5; color:#fff; }
+
+@keyframes hp-float-badge-in{
+  from{ opacity:0; transform:translateX(16px); }
+  to{ opacity:1; transform:translateX(0); }
+}
+
+@media (max-width:1280px){ .hp-float-badge{ width:110px; right:10px; } }
+@media (max-width:1024px){ .hp-float-badge{ display:none; } }
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion:reduce){
+  .hp-float-badge{ animation:none; }
+  .hp-float-badge img{ transition:none; }
+}
+
 
