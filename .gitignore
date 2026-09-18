@@ -60,3 +60,6 @@ server.js
 !/images/lids-sprayers-300x300.png
 !/images/racks-handles-300x300.png
 !/images/we_serve_center.png
+
+# 首页右侧悬浮徽章（Canton Fair，链接 /exhibition）
+!/images/canton-fair-floating-badge-transparent.png
