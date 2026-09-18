@@ -1941,7 +1941,7 @@
   top:25%;
   right:18px;
   z-index:900;
-  width:132px;
+  width:264px;
   display:block;
   text-decoration:none;
   filter:drop-shadow(0 10px 26px rgba(15,18,25,.18));
@@ -1984,14 +1984,14 @@
 }
 
 /* 响应式：平板 / 手机等比缩小并贴边，移动端保持显示 */
-@media (max-width:1280px){ .hp-float-badge{ width:110px; right:10px; } }
+@media (max-width:1280px){ .hp-float-badge{ width:220px; right:10px; } }
 @media (max-width:768px){
   /* 手机上放到移动端导航层(200)之下，避免盖住菜单 */
-  .hp-float-badge{ width:84px; right:8px; top:22%; z-index:150; filter:drop-shadow(0 6px 16px rgba(15,18,25,.16)); }
+  .hp-float-badge{ width:168px; right:8px; top:22%; z-index:150; filter:drop-shadow(0 6px 16px rgba(15,18,25,.16)); }
 }
 @media (max-width:480px){
-  .hp-float-badge{ width:72px; right:6px; top:20%; }
-  .hp-float-badge__close{ width:20px; height:20px; font-size:12px; top:-6px; right:-6px; }
+  .hp-float-badge{ width:144px; right:6px; top:20%; }
+  .hp-float-badge__close{ width:24px; height:24px; font-size:14px; top:-6px; right:-6px; }
 }
 
 /* Respect reduced-motion preference */
