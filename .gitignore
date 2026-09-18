@@ -63,3 +63,19 @@ server.js
 
 # 首页右侧悬浮徽章（Canton Fair，链接 /exhibition）
 !/images/canton-fair-floating-badge-transparent.png
+
+# ============================================================
+# 5) 站点入口：Cloudflare 构建需要根目录入口文件
+#    （此前仓库里只有 homepage.html，wrangler 检测不到静态站点）
+# ============================================================
+!/index.html
+!/zgs-glass-logo.png
+
+# index.html 依赖的图片目录
+!/images/industries
+/images/industries/*
+!/images/industries/*.jpg
+
+!/images/Customization Process
+/images/Customization Process/*
+!/images/Customization Process/*.png
